@@ -11,7 +11,7 @@
 	
 <script>
 let repository = "repos/sdslayer100/rsewiki"
-let targetFile = "section01.html"
+let targetFile = "section01/section01.html"
 fetch(`https://api.github.com/${repository}/commits?path=${targetFile}`) // fetch this URL
 .then(x => x.json()) // convert to JSON
 .then(commits => { // "commits" is a list of all the commits + details
