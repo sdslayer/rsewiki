@@ -1,0 +1,61 @@
+.columns {
+  columns: 2;
+}
+
+
+body {
+  background-color: #640064;
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-attachment: fixed;
+}
+
+h1 {
+  text-align: center;
+  font-family: Helvetica, sans-serif;
+  font-variant: small-caps;
+  color: #ffffff;
+  background-color: #000000;
+}
+
+p {
+  text-align: center;
+  font-size: 18px;
+  color: #ffffff;
+  padding: 5px;
+  margin: auto;
+}
+
+h2{
+	font-size: 40px;
+	text-align:center;
+	font-family:Helvetica, sans-serif;
+	font-variant:small-caps;
+	color:#ffffff;
+	background-color:#000000;
+	}
+	
+h3, h4, h5{
+	text-align:center;
+	font-family:Helvetica, sans-serif;
+	font-variant:small-caps;
+	color:#ffffff;
+	background-color:#000000;
+	}
+
+	
+a:link {
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #00FFFF;
+  background-color: transparent;
+}
+
+a:hover {
+  color: red;
+  background-color: transparent;
+  font-weight: bold;
+}

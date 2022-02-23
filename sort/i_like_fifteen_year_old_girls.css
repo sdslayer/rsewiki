@@ -1,0 +1,126 @@
+.columns {
+  columns: 2;
+}
+
+
+body {
+  background-color: #640064;
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-attachment: fixed;
+}
+
+h1 {
+  text-align: center;
+  font-family: Helvetica, sans-serif;
+  font-variant: small-caps;
+  color: #ffffff;
+  background-color: #000000;
+}
+
+p {
+  text-align: center;
+  font-size: 18px;
+  color: #ffffff;
+  padding: 5px;
+  margin: auto;
+}
+
+h2{
+	font-size: 40px;
+	text-align:center;
+	font-family:Helvetica, sans-serif;
+	font-variant:small-caps;
+	color:#ffffff;
+	background-color:#000000;
+	}
+	
+h3, h4, h5{
+	text-align:center;
+	font-family:Helvetica, sans-serif;
+	font-variant:small-caps;
+	color:#ffffff;
+	background-color:#000000;
+	}
+
+table{
+  width: 100%;
+  background-color: #000000;
+  border-collapse: collapse;
+  border-width: 0px;
+  border-color: #7EA8F8;
+  border-style: solid;
+  color: #FFFFFF;
+}
+
+td {
+  border-width: 0px;
+  border-color: #7EA8F8;
+  border-style: solid;
+  padding: 10px;
+  text-align: center;
+  font-family: Helvetica, sans-serif;
+  font-variant: small-caps;
+  color: #ffffff;
+  background-color: #000000;
+}
+
+th {
+  border-width: 0px;
+  border-color: #7EA8F8;
+  border-style: solid;
+  padding: 10px;
+  text-align: center;
+  font-family: Helvetica, sans-serif;
+  font-variant: small-caps;
+  color: #ffffff;
+  background-color: #000000;
+  font-size: 18px;
+}
+
+.table-sortable th td {
+  cursor: pointer;
+  border-width: 0px;
+  border-color: #7EA8F8;
+  border-style: solid;
+  padding: 10px;
+  text-align: center;
+  font-family: Helvetica, sans-serif;
+  font-variant: small-caps;
+  color: #ffffff;
+  background-color: #000000;
+}
+
+a:link {
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #00FFFF;
+  background-color: transparent;
+}
+
+a:hover {
+  color: red;
+  background-color: transparent;
+  font-weight: bold;
+}
+
+.table-sortable .th-sort-asc::after {
+  content: "\25b4";
+}
+
+.table-sortable .th-sort-desc::after {
+  content: "\25be";
+}
+
+.table-sortable .th-sort-asc::after,
+.table-sortable .th-sort-desc::after {
+  margin-left: 5px;
+}
+
+.table-sortable .th-sort-asc,
+.table-sortable .th-sort-desc {
+  background: rgba(0, 0, 0, 0.1);
+}
