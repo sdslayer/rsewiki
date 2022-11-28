@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>RSE Wiki</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="RSE-018: The Maze of Steel">
+    <link rel="stylesheet" href="entries.css">
+  </head>
+
+<script>
+let repository = "repos/sdslayer100/rsewiki"
+let targetFile = "section01/018.html"
+fetch(`https://api.github.com/${repository}/commits?path=${targetFile}`) // fetch this URL
+.then(x => x.json()) // convert to JSON
+.then(commits => { // "commits" is a list of all the commits + details
+    let mostRecentCommit = commits[0] // get the first commit in the list
+    let commitDate = mostRecentCommit.commit.author.date // get the date (inside commit.author.date) 
+    let dateObj = new Date(commitDate) // convert to a JS date which can be styled in any way you want
+
+    // dateObj has a bunch of functions for styling however you want
+    // full list - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#instance_methods
+    console.log("Raw Date: " + dateObj)
+    console.log("Long Date: " + dateObj.toDateString())
+    console.log("Short Date: " + dateObj.toLocaleDateString('en-US'))
+    console.log("Unix Timestamp: " + dateObj.getTime())
+	var options = { year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: false };
+	options.timeZone = 'PST';
+	options.timeZoneName = 'short';
+	document.getElementById("demo").innerHTML = dateObj.toLocaleString("en-US", options);
+})
+</script>
+    <h1>RSE-018</h1>
+    <h2>The Maze of Steel</h2>
+	<div>DANGER LEVEL: 4</div>
+	<div>CLEARANCE LEVEL: 4</div>
+	<br>
+	<div style="font-size:18px;"><a href="./017.html">[← RSE-017]</a> <a href="./random.html">[RANDOM]</a> <a href="./019.html">[RSE-019→]</a></div>
+    <hr>
+    </hr>
+    <h3>DESCRIPTION</h3>
+
+
+    <p>
+      <table>
+        <tr>
+          <th><img src="018.png" style="width:380px;height:auto;"/></th>
+        </tr>
+        <tr>
+          <th>RSE-018 shortly after discovery</th>
+        </tr>
+      </table>
+    </p>
+	
+    <p>RSE-018 is a seemingly infinite maze of randomly segmented and sized hallways and rooms composed entirely of common metals and alloys, most notably steel. RSE-018 contains various items that are traditionally manufactured with steel, such as but not limited to the following: Prison cell bars, pipes, silverware, household appliances, beams, and segments of pylons. Any form of inorganic matter that comes into contact with RSE-018 is almost instantaneously converted into steel and remains in the place of contact.
+	<br>
+	<br>
+	RSE-018 is capable of manifesting itself within any door space at seemingly random intervals. If not properly dealt with, the contents of RSE-018 will spread and convert surrounding areas to itself, expanding its already near infinite area until relocating. It is highly theorized, yet not completely proven, that RSE-018 may 'feed' on matter provided to it, and will only relocate once it stops receiving a source of fuel. Due to the likelihood of this theory, Protocol 018-ALPHA is to be carefully planned months in advance - see containment procedures for more details.
+	
+    <hr>
+    </hr>
+    <h3>CONTAINMENT PROCEDURES</h3>
+	
+	<p style="text-align:center;">RSE-018 was discovered and thereafter acquired by the RSE Association on March 21, 2018, when RSE-018 manifested itself within the observation deck of RSE-030's containment cell - located in S-02 of Location 02. RSE-018 is to be monitored by three Level 3 Clearance personnel at all times. The containment cell is equipped with four high capacity incinerators to prevent RSE-018 from expanding. Protocol 018-ALPHA is to be completed biweekly, where a collection of five low-level test subjects are to be equipped with GPS units and given various items to place approximately fifteen meters within RSE-018.</p>
+	
+    <hr>
+    </hr>
+    <h5>Addendum: GPS units and camera feeds remain functional up to five kilometers into RSE-018.</h5>
+	    <hr>
+    </hr>
+    <h3>EXPERIMENT LOG 018-1</h3>
+	<div>Date: Thursday, March 22, 2018 [5:15AM]</div><br>
+	<div>Observer(s): Dr. Cung</div><br>
+	<div>Subject(s): RSE-018, Small satchel of fourteen rubber marbles</div><br>
+	<div>Test Subjects: TS818</div><br>
+	<div style="font-family:Helvetica, sans-serif;font-variant:small-caps;font-size:20px;">
+*TS818 is equipped with a shoulder-mounted video camera and instructed to step inside of RSE-018, without shoes*</div><br>
+
+<div style="display:inline;float:left;font-family:Helvetica, sans-serif;font-variant:small-caps;font-size:20px;">[5:16]</div> <div style="font-family:Helvetica, sans-serif;font-variant:small-caps;font-size:20px;">TS818 enters and proceeds to slowly wander further into RSE-018*</div><br>
+<div style="font-family:Helvetica, sans-serif;font-variant:small-caps;font-size:20px;">*TS818 is instructed to stop and empty the satchel of its contents*</div><br>
+
+<div style="display:inline;float:left;font-family:Helvetica, sans-serif;font-variant:small-caps;font-size:20px;">[5:20]</div> <div style="font-family:Helvetica, sans-serif;font-variant:small-caps;font-size:20px;">*TS818 complies, emptying the marbles onto the floor*</div><br>
+<div style="font-family:Helvetica, sans-serif;font-variant:small-caps;font-size:20px;">*Without bouncing, the marbles hit the floor and solidify in an instant*</div><br>
+
+<div style="display:inline;float:left;font-family:Helvetica, sans-serif;font-variant:small-caps;font-size:20px;">[5:21]</div> <div style="font-family:Helvetica, sans-serif;font-variant:small-caps;font-size:20px;">*TS818 is then advised to begin exiting RSE-018*</div><br>
+<div style="font-family:Helvetica, sans-serif;font-variant:small-caps;font-size:20px;">*TS818 turns around and begins to walk towards the entrance of RSE-018*</div><br>
+
+<div style="display:inline;float:left;font-family:Helvetica, sans-serif;font-variant:small-caps;font-size:20px;">[5:23]</div> <div style="font-family:Helvetica, sans-serif;font-variant:small-caps;font-size:20px;">*TS818 trips over an unseen section of rebar*</div><br>
+
+<div style="font-family:Helvetica, sans-serif;font-variant:small-caps;font-size:20px;">*Upon hitting the floor, TS818's clothes solidify and become bound to the floor*<br>
+*TS818 struggles to breathe, likely due to his clothes petrifying during compression*</div><br>
+
+<div style="display:inline;float:left;font-family:Helvetica, sans-serif;font-variant:small-caps;font-size:20px;">[5:25]</div> <div style="font-family:Helvetica, sans-serif;font-variant:small-caps;font-size:20px;">*TS818 becomes unresponsive and is pronounced dead soon after*<br>
+
+	</div>
+	<div><a href="./section01.html">[BACK]</a> <a href="../index.html">[HOME]</a></div><br>
+	<footer>Written by Lix
+		<br><span style="color:#ffffff;font-family:Times New Roman;font-variant:none;">Date acquired: 3/21/2018</span>
+		<br><span style="color:#ffffff;font-family:Times New Roman;font-variant:none;">Last updated: </span>
+	<span id='demo' style="color:#ffffff;font-family:Times New Roman;font-variant:none;"></footer>
+	
+  </body>
+
+</html>
