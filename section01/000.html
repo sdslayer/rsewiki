@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>RSE Wiki</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="RSE-000: Leg the Wash">
+    <link rel="stylesheet" href="entries.css">
+  </head>
+
+<script>
+let repository = "repos/sdslayer100/rsewiki"
+let targetFile = "section01/030.html"
+fetch(`https://api.github.com/${repository}/commits?path=${targetFile}`) // fetch this URL
+.then(x => x.json()) // convert to JSON
+.then(commits => { // "commits" is a list of all the commits + details
+    let mostRecentCommit = commits[0] // get the first commit in the list
+    let commitDate = mostRecentCommit.commit.author.date // get the date (inside commit.author.date) 
+    let dateObj = new Date(commitDate) // convert to a JS date which can be styled in any way you want
+
+    // dateObj has a bunch of functions for styling however you want
+    // full list - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#instance_methods
+    console.log("Raw Date: " + dateObj)
+    console.log("Long Date: " + dateObj.toDateString())
+    console.log("Short Date: " + dateObj.toLocaleDateString('en-US'))
+    console.log("Unix Timestamp: " + dateObj.getTime())
+	var options = { year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: false };
+	options.timeZone = 'PST';
+	options.timeZoneName = 'short';
+	document.getElementById("demo").innerHTML = dateObj.toLocaleString("en-US", options);
+})
+</script>
+    <h1>RSE-000</h1>
+    <h2>Leg the Wash</h2>
+	<div>DANGER LEVEL: Undeterminable</div>
+	<div>CLEARANCE LEVEL: 5</div>
+	<br>
+	<div style="font-size:18px;"><a href="./000.html">[← N/A]</a> <a href="./randomfake.html">[RANDOM]</a> <a href="./000.html">[N/A→]</a></div>
+    <hr>
+    </hr>
+
+ <h3>PRELIMINARY</h3>
+	
+    <p> Any information outside of this article directly mentioning RSE-000 is to be completely censored, while information referring to the existence of RSE-000 is to be greatly altered. Any information relating to RSE-000 is considered a serious hazard to anyone outside of Level 5 Clearance. This article’s existence serves as a reminder to RSE higher ups, who are unfortunately not immune to RSE-000-1. See description for more information.
+
+    <p>
+      <table>
+        <tr>
+          <th><img src="000.png" style="width:300px;height:auto;"/></th>
+        </tr>
+        <tr>
+          <th>An image believed to be RSE-000<br>which appeared for only fourteen<br>milliseconds on a camera feed<br>in Location 03</th>
+        </tr>
+      </table>
+    </p>
+    <h3>DESCRIPTION</h3>
+	
+    <p> RSE-000 is a sentient, psychic and highly dangerous LG brand high-efficiency washing machine. Its exact origins are unknown, and is theorized to have been around as long as the creation of Earth, but is almost certainly responsible for the creation of all other AOC specimen, including RSE-010, who was created in 1333.
+<br>
+<br>
+RSE-000’s main method of killing is unknown, as multiple different processes have been observed. RSE-000 is responsible for multiple plague outbreaks that occurred before the 15th century, as well as possibly pulling the asteroid that wiped out the dinosaurs 65 million years ago towards Earth. RSE-000 is believed to have become dormant in the year 1352 after a great war against humanity alongside other AOC members.
+<br>
+<br>
+On December 1 of each year, any subjects who are aware of RSE-000’s existence inexplicably forget about it. This event has come to be classified as RSE-000-1, and is believed to be caused by massively scaled delta waves emitted by RSE-000 in its dormancy. Level 5 Clearance personnel are to carefully plan for this event weeks in advance - see Protocol LW-ALPHA in Containment Procedures for more information.
+
+
+</p>
+    <hr>
+    </hr>
+    <h3>CONTAINMENT PROCEDURES</h3>
+	
+	<p>RSE-000’s exact location is unknown, both to RSE personnel and other AOC members, however it is believed to be located in the vicinity of Location 03. Due to this, several protocols have been planned over decades in the case of RSE-000 becoming active once again. 
+	<br>
+	<br>
+	Protocol LW-ALPHA involves the posting of fliers regarding RSE-000 around Level 5 Clearance office spaces to remind them of RSE-000’s existence once RSE-000-1 occurs. This is to be carried out three days in advance. After personnel are reminded of the threat of RSE-000, the fliers are to be taken down and quickly disposed of, likely through incineration.
+<br>
+<br>
+Protocol LW-OMEGA is to be carried out in the case that RSE-000 becomes active once more. This event will likely be detected, as a large-scale earthquake is predicted to happen shortly after an RSE-000-1 event. In this case, All RSE specimen will be released from containment out into the public in hopes of an easier death rather than the endless years of torment that RSE-000 will cause. Any personnel lower than Level 5 Clearance will not be notified of this, but a statement will be released by multiple world leaders as soon as the protocol has begun.
+
+</p>
+
+	
+	
+	<hr></hr><br>
+	<div><a href="./000.html">[BACK]</a> <a href="../000.html">[HOME]</a></div><br>
+	<footer>Written by ???
+		<br><span style="color:#ffffff;font-family:Times New Roman;font-variant:none;">Date acquired: N/A</span>
+		<br><span style="color:#ffffff;font-family:Times New Roman;font-variant:none;">Last updated: </span>
+	<span id='demo' style="color:#ffffff;font-family:Times New Roman;font-variant:none;"></footer>
+	
+  </body>
+
+</html>
