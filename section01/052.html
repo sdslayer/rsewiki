@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>RSE Wiki</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="RSE-052: ClikClak Premium">
+    <link rel="stylesheet" href="entries.css">
+  </head>
+
+<script>
+let repository = "repos/sdslayer100/rsewiki"
+let targetFile = "section01/052.html"
+fetch(`https://api.github.com/${repository}/commits?path=${targetFile}`) // fetch this URL
+.then(x => x.json()) // convert to JSON
+.then(commits => { // "commits" is a list of all the commits + details
+    let mostRecentCommit = commits[0] // get the first commit in the list
+    let commitDate = mostRecentCommit.commit.author.date // get the date (inside commit.author.date) 
+    let dateObj = new Date(commitDate) // convert to a JS date which can be styled in any way you want
+
+    // dateObj has a bunch of functions for styling however you want
+    // full list - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#instance_methods
+    console.log("Raw Date: " + dateObj)
+    console.log("Long Date: " + dateObj.toDateString())
+    console.log("Short Date: " + dateObj.toLocaleDateString('en-US'))
+    console.log("Unix Timestamp: " + dateObj.getTime())
+	var options = { year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: false };
+	options.timeZone = 'PST';
+	options.timeZoneName = 'short';
+	document.getElementById("demo").innerHTML = dateObj.toLocaleString("en-US", options);
+})
+</script>
+    <h1>RSE-052</h1>
+    <h2>ClikClak Premium</h2>
+	<div>DANGER LEVEL: 1</div>
+	<div>CLEARANCE LEVEL: 3</div>
+	<br>
+	<div style="font-size:18px;"><a href="./051.html">[← RSE-051]</a> <a href="./random.html">[RANDOM]</a> <a href="./053.html">[RSE-053→]</a></div>
+    <hr>
+    </hr>
+
+
+    <p>
+      <table>
+        <tr>
+          <th><img src="052.png" style="width:200px;height:auto;"/></th>
+        </tr>
+        <tr>
+          <th>A screenshot from the<br>developer build which<br>contains RSE-052. Note that<br>RSE-052-1 is not present<br>in this image</th>
+        </tr>
+      </table>
+    </p>
+    <h3>DESCRIPTION</h3>
+	
+    <p> RSE-052 is a previously hidden and now disabled subscription service to the highly popular Grushian social media app ClikClak. RSE-052 was added as a feature to the app on November 9, 2022, with a fee of 7.99 USD per month. Upon purchasing, users are redirected to an alternate site, classified RSE-052-1, and are unable to return to the primary version of the app unless RSE-052’s service is canceled. 
+<br>
+<br>
+RSE-052-1 is almost identical to the original app, but unintentionally serves exclusively as a subscription to only view posts from British television host James Corden, who is given the designation RSE-052-2. It is unknown if RSE-052-2 is posting directly to the user, as most posts by the subject are incredibly vague.
+
+
+</p>
+    <hr>
+    </hr>
+    <h3>CONTAINMENT PROCEDURES</h3>
+	
+	<p>RSE-052 can be found on a developer build of ClikClak on Dr. Wood’s old cell phone, located in the Anomalous Object Hall of Location 01. Any other evidence of RSE-052’s existence was terminated on November 11, 2022. Posts, articles, or videos referring to RSE-052’s existence are to be instantly deleted via botting services provided by the RSE Association.
+	<br>
+</p>
+
+	
+	
+	<hr></hr><br>
+	<div><a href="./section01.html">[BACK]</a> <a href="../index.html">[HOME]</a></div><br>
+	<footer>Written by Lix
+		<br><span style="color:#ffffff;font-family:Times New Roman;font-variant:none;">Date acquired: 11/9/2022</span>
+		<br><span style="color:#ffffff;font-family:Times New Roman;font-variant:none;">Last updated: </span>
+	<span id='demo' style="color:#ffffff;font-family:Times New Roman;font-variant:none;"></footer>
+	
+  </body>
+
+</html>
