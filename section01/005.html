@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>RSE Wiki</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="RSE-005: Arm the Chair">
+    <link rel="stylesheet" href="entries.css">
+  </head>
+
+<script>
+let repository = "repos/sdslayer100/rsewiki"
+let targetFile = "section01/030.html"
+fetch(`https://api.github.com/${repository}/commits?path=${targetFile}`) // fetch this URL
+.then(x => x.json()) // convert to JSON
+.then(commits => { // "commits" is a list of all the commits + details
+    let mostRecentCommit = commits[0] // get the first commit in the list
+    let commitDate = mostRecentCommit.commit.author.date // get the date (inside commit.author.date) 
+    let dateObj = new Date(commitDate) // convert to a JS date which can be styled in any way you want
+
+    // dateObj has a bunch of functions for styling however you want
+    // full list - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#instance_methods
+    console.log("Raw Date: " + dateObj)
+    console.log("Long Date: " + dateObj.toDateString())
+    console.log("Short Date: " + dateObj.toLocaleDateString('en-US'))
+    console.log("Unix Timestamp: " + dateObj.getTime())
+	var options = { year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: false };
+	options.timeZone = 'PST';
+	options.timeZoneName = 'short';
+	document.getElementById("demo").innerHTML = dateObj.toLocaleString("en-US", options);
+})
+</script>
+    <h1>RSE-005</h1>
+    <h2>Arm the Chair</h2>
+	<div>DANGER LEVEL: 5</div>
+	<div>CLEARANCE LEVEL: 5</div>
+	<br>
+	<div style="font-size:18px;"><a href="./004.html">[← RSE-004]</a> <a href="./random.html">[RANDOM]</a> <a href="./006.html">[RSE-006→]</a></div>
+    <hr>
+    </hr>
+
+
+    <p>
+      <table>
+        <tr>
+          <th><img src="chairfive.png" style="width:300px;height:auto;"/></th>
+        </tr>
+        <tr>
+          <th>RSE-005 immediately after discovery</th>
+        </tr>
+      </table>
+    </p>
+    <h3>DESCRIPTION</h3>
+	
+    <p> RSE-005 is a sentient rocking chair constructed from African Blackwood. It is believed to have been created by RSE-010 sometime in the year 1337. RSE-005 has the unusual ability to speak in any language despite having any clear location of mouth. 
+<br>
+<br>
+RSE-005 is also capable of communicating telepathically with humans, using this ability to lure in victims by transmitting their greatest desires and then attacking them. RSE-005’s method of killing involves absorbing subjects into itself once they have sat upon RSE-005.
+
+
+</p>
+    <hr>
+    </hr>
+    <h3>CONTAINMENT PROCEDURES</h3>
+	
+	<p>Location 04 was constructed with the sole intent of holding RSE-005 as far as possible away from RSE-010 and other AOC specimen. RSE-005 is kept under permanent sedation in a cryogenically frozen steel containment cell in Sector 03 of Location 04.
+</p>
+
+	
+	
+	<hr></hr><br>
+	<div><a href="./section01.html">[BACK]</a> <a href="../index.html">[HOME]</a></div><br>
+	<footer>Written by Lix
+		<br><span style="color:#ffffff;font-family:Times New Roman;font-variant:none;">Date acquired: 1/10/1974</span>
+		<br><span style="color:#ffffff;font-family:Times New Roman;font-variant:none;">Last updated: </span>
+	<span id='demo' style="color:#ffffff;font-family:Times New Roman;font-variant:none;"></footer>
+	
+  </body>
+
+</html>
