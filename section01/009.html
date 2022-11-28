@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>RSE Wiki</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="RSE-009: Hulk Kid">
+    <link rel="stylesheet" href="entries.css">
+  </head>
+
+<script>
+let repository = "repos/sdslayer100/rsewiki"
+let targetFile = "section01/030.html"
+fetch(`https://api.github.com/${repository}/commits?path=${targetFile}`) // fetch this URL
+.then(x => x.json()) // convert to JSON
+.then(commits => { // "commits" is a list of all the commits + details
+    let mostRecentCommit = commits[0] // get the first commit in the list
+    let commitDate = mostRecentCommit.commit.author.date // get the date (inside commit.author.date) 
+    let dateObj = new Date(commitDate) // convert to a JS date which can be styled in any way you want
+
+    // dateObj has a bunch of functions for styling however you want
+    // full list - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#instance_methods
+    console.log("Raw Date: " + dateObj)
+    console.log("Long Date: " + dateObj.toDateString())
+    console.log("Short Date: " + dateObj.toLocaleDateString('en-US'))
+    console.log("Unix Timestamp: " + dateObj.getTime())
+	var options = { year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: false };
+	options.timeZone = 'PST';
+	options.timeZoneName = 'short';
+	document.getElementById("demo").innerHTML = dateObj.toLocaleString("en-US", options);
+})
+</script>
+    <h1>RSE-009</h1>
+    <h2>Hulk Kid</h2>
+	<div>DANGER LEVEL: 4</div>
+	<div>CLEARANCE LEVEL: 4</div>
+	<br>
+	<div style="font-size:18px;"><a href="./008.html">[← RSE-008]</a> <a href="./random.html">[RANDOM]</a> <a href="./010.html">[RSE-010→]</a></div>
+    <hr>
+    </hr>
+
+
+    <p>
+      <table>
+        <tr>
+          <th><img src="009.png" style="width:300px;height:auto;"/></th>
+        </tr>
+        <tr>
+          <th>RSE-009 in a state of enragement</th>
+        </tr>
+      </table>
+    </p>
+    <h3>DESCRIPTION</h3>
+	
+    <p> RSE-009 is a Latino-American boy appearing to be permanently stuck at approximately 8 years of age - with the date of birth being listed as June 15, 2008 on his birth certificate - by the name of ‘Percy Aguirre.’ He is capable of basic speech but appears to be slightly behind in mental development. Due to his hostile nature, RSE Location faculty are to regard RSE-009 with his given name rather than his numerical classification and normal social pronouns during conversation.
+<br>
+<br>
+When irritated, RSE-009 begins to increase tremendously in size. He has been observed reaching a height of 2.18 meters and a weight of 130 kilograms. The pigment of RSE-009 also shifts slightly to be more green. While in this state, RSE-009 will begin to seek out any persons in a 1 kilometer radius from its point of enragement. These occurrences last around ten minutes at a time, but have been noted lasting up to thirty minutes in some cases.
+
+
+</p>
+    <hr>
+    </hr>
+    <h3>CONTAINMENT PROCEDURES</h3>
+	
+	<p style="text-align:center;">RSE-009 is contained in a 5m x 5m x 5m padded containment cell in Location 04 and is to be given food and water through a feeding tube by Level 4 Clearance once every four hours. One way observation windows are located on both ends of the containment cell, and RSE-009 must be observed by at least three personnel at all times.
+</p>
+
+	
+	
+	<hr></hr><br>
+	<div><a href="./section01.html">[BACK]</a> <a href="../index.html">[HOME]</a></div><br>
+	<footer>Written by Lix
+		<br><span style="color:#ffffff;font-family:Times New Roman;font-variant:none;">Date acquired: 3/1/2018</span>
+		<br><span style="color:#ffffff;font-family:Times New Roman;font-variant:none;">Last updated: </span>
+	<span id='demo' style="color:#ffffff;font-family:Times New Roman;font-variant:none;"></footer>
+	
+  </body>
+
+</html>

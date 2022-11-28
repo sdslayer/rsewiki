@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>RSE Wiki</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="RSE-008: Ant Zoo">
+    <link rel="stylesheet" href="entries.css">
+  </head>
+
+<script>
+let repository = "repos/sdslayer100/rsewiki"
+let targetFile = "section01/025.html"
+fetch(`https://api.github.com/${repository}/commits?path=${targetFile}`) // fetch this URL
+.then(x => x.json()) // convert to JSON
+.then(commits => { // "commits" is a list of all the commits + details
+    let mostRecentCommit = commits[0] // get the first commit in the list
+    let commitDate = mostRecentCommit.commit.author.date // get the date (inside commit.author.date) 
+    let dateObj = new Date(commitDate) // convert to a JS date which can be styled in any way you want
+
+    // dateObj has a bunch of functions for styling however you want
+    // full list - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#instance_methods
+    console.log("Raw Date: " + dateObj)
+    console.log("Long Date: " + dateObj.toDateString())
+    console.log("Short Date: " + dateObj.toLocaleDateString('en-US'))
+    console.log("Unix Timestamp: " + dateObj.getTime())
+	var options = { year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: false };
+	options.timeZone = 'PST';
+	options.timeZoneName = 'short';
+	document.getElementById("demo").innerHTML = dateObj.toLocaleString("en-US", options);
+})
+</script>
+    <h1>RSE-008</h1>
+    <h2>Ant Zoo</h2>
+	<div>DANGER LEVEL: 3</div>
+	<div>CLEARANCE LEVEL: 4</div>
+	<br>
+	<div style="font-size:18px;"><a href="./007.html">[← RSE-007]</a> <a href="./random.html">[RANDOM]</a> <a href="./009.html">[RSE-009→]</a></div>
+    <hr>
+    </hr>
+
+
+    <p>
+      <table>
+        <tr>
+          <th><img src="008one.png" style="width:320px;height:auto;"/></th>
+        </tr>
+        <tr>
+          <th>The first photograph of RSE-008</th>
+        </tr>
+      </table>
+    </p>
+    <h3>DESCRIPTION</h3>
+	
+    <p>RSE-008 is a mid-to-high-class gated suburban neighborhood in Ableton, Grushia, formerly known as ‘The Accolade,’ which now serves as a 1,600 acre community to various species of ants in the genus Solenopsis. RSE-008 previously provided homes to over 60,000 citizens and was one of the largest gated communities in Salmon County, Grushia.
+	<br>
+	<br>
+	RSE-008 started out as an average size fire ant mound, unusually at the mathematically perfect center of the community. This mound was discovered and photographed on January 14, 2006. Three days after the photo was taken, RSE-008 had quickly expanded to roughly six feet in diameter. By January 19, RSE-008 was growing exponentially, and had expanded to be fourteen feet in diameter. The HOA was notified of this shortly after and began to evacuate homeowners immediately. RSE-008 thereafter continued expanding, and reached its current size on February 18, 2006. RSE-008 has not expanded since.
+	<br>
+	<br>
+	The species of ants residing in RSE-008, classified as RSE-008-1, have been noted as being unusually intelligent in nature, responding to attacks by outside species with similar behavior to that of the Panthera tigris genus. RSE-008-1 specimen are incredibly defensive and have been observed exiting RSE-008 solely to attack invading threats. Despite this ability to exit, these RSE-008-1 specimen have not shown any sign of attempting expansion outside of RSE-008.
+
+</p>
+    <hr>
+    </hr>
+    <h3>CONTAINMENT PROCEDURES</h3>
+	
+	<p style="text-align:center;">Shortly after the expansion of RSE-008 to its current size, RSE Association personnel were notified in order to keep the area under control. RSE-008 is located approximately 800 kilometers away from Location 01, and many site personnel were relocated to temporary living areas in the surrounding area. Thirty meter tall concrete walls were constructed surrounding RSE-008 with the only entrance - located on the south end of the community - being able to be accessed by Level 4 Clearance.</p>
+    
+	
+	<p>
+      <table>
+        <tr>
+          <th><img src="008two.png" style="width:380px;height:auto;"/></th>
+        </tr>
+        <tr>
+          <th>A map of the community taken over by RSE-008</th>
+        </tr>
+      </table>
+	  <br>
+    </p>
+	
+	<hr></hr><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	<div><a href="./section01.html">[BACK]</a> <a href="../index.html">[HOME]</a></div><br>
+	<footer>Written by Lix
+		<br><span style="color:#ffffff;font-family:Times New Roman;font-variant:none;">Date acquired: 2/20/2006</span>
+		<br><span style="color:#ffffff;font-family:Times New Roman;font-variant:none;">Last updated: </span>
+	<span id='demo' style="color:#ffffff;font-family:Times New Roman;font-variant:none;"></footer>
+	
+  </body>
+
+</html>

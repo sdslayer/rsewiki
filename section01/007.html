@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>RSE Wiki</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="RSE-007: Jerry the Tooth">
+    <link rel="stylesheet" href="entries.css">
+  </head>
+
+<script>
+let repository = "repos/sdslayer100/rsewiki"
+let targetFile = "section01/030.html"
+fetch(`https://api.github.com/${repository}/commits?path=${targetFile}`) // fetch this URL
+.then(x => x.json()) // convert to JSON
+.then(commits => { // "commits" is a list of all the commits + details
+    let mostRecentCommit = commits[0] // get the first commit in the list
+    let commitDate = mostRecentCommit.commit.author.date // get the date (inside commit.author.date) 
+    let dateObj = new Date(commitDate) // convert to a JS date which can be styled in any way you want
+
+    // dateObj has a bunch of functions for styling however you want
+    // full list - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#instance_methods
+    console.log("Raw Date: " + dateObj)
+    console.log("Long Date: " + dateObj.toDateString())
+    console.log("Short Date: " + dateObj.toLocaleDateString('en-US'))
+    console.log("Unix Timestamp: " + dateObj.getTime())
+	var options = { year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: false };
+	options.timeZone = 'PST';
+	options.timeZoneName = 'short';
+	document.getElementById("demo").innerHTML = dateObj.toLocaleString("en-US", options);
+})
+</script>
+    <h1>RSE-007</h1>
+    <h2>Jerry the Tooth</h2>
+	<div>DANGER LEVEL: 2</div>
+	<div>CLEARANCE LEVEL: 1</div>
+	<br>
+	<div style="font-size:18px;"><a href="./006.html">[← RSE-006]</a> <a href="./random.html">[RANDOM]</a> <a href="./008.html">[RSE-008→]</a></div>
+    <hr>
+    </hr>
+
+
+    <p>
+      <table>
+        <tr>
+          <th><img src="007tot.png" style="width:300px;height:auto;"/></th>
+        </tr>
+        <tr>
+          <th>RSE-007 shortly after creation</th>
+        </tr>
+      </table>
+    </p>
+    <h3>DESCRIPTION</h3>
+	
+    <p> RSE-007 is a sentient, grotesquely large tooth resembling that of a human molar, with the self given name ‘Jerry.’ RSE-007, as of January 1, 2022, has been observed at a height of 1.2 meters and a weight of 54 kilograms. RSE-007 is capable of highly intelligent speech in English, and has been described as being ‘incredibly friendly’ with no noted occurrence of it being hostile towards any RSE personnel.
+<br>
+<br>
+RSE-007 was artificially manufactured by a highly skilled RSE researcher sometime in August 1998 as a defense mechanism against most mid-level danger class RSE specimen. It was given the ability to channel power and release it in a controlled beam capable of piercing thick steel, and is often used at a low power level to sedate RSE specimen who have breached containment.
+
+
+
+</p>
+    <hr>
+    </hr>
+    <h3>CONTAINMENT PROCEDURES</h3>
+	
+	<p>RSE-007 is held in its own room in the living quarters sector of Location 01. RSE-007 is able to freely roam most low clearance areas of each location. RSE-007 is to be notified immediately after a breach has occurred and quickly transported to the location of the breach.</p>
+	<hr>
+    </hr>
+    <h3>EXPERIMENT LOG 007-1</h3>
+	<div>Date: Tuesday, September 1, 1998 [2:30PM]</div><br>
+	<div>Observer(s): Dr. Wood</div><br>
+	<div>Subject(s): RSE-007, Steel bar</div><br>
+	<div style="font-family:Helvetica, sans-serif;
+	font-variant:small-caps;font-size: 20px;">
+*RSE-007 is instructed to utilize its beaming ability to penetrate a large steel bar*<br>
+RSE-007: I can do that. Let's see...<br>
+*RSE-007 turns on its side and begins to emit a blinding light at its top*<br>
+*The light slowly turns into a beam and travels towards the bar*<br>
+*On impact, the beam slowly melts the bar until a large pile of scrap remains*<br>
+RSE-007: Damn.<br>
+Dr. Wood: Damn.</div>
+
+
+	
+	
+	<hr></hr><br>
+	<div><a href="./section01.html">[BACK]</a> <a href="../index.html">[HOME]</a></div><br>
+	<footer>Written by Lix
+		<br><span style="color:#ffffff;font-family:Times New Roman;font-variant:none;">Date acquired: 8/??/1998</span>
+		<br><span style="color:#ffffff;font-family:Times New Roman;font-variant:none;">Last updated: </span>
+	<span id='demo' style="color:#ffffff;font-family:Times New Roman;font-variant:none;"></footer>
+	
+  </body>
+
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>RSE Wiki</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="RSE-006: Devastating Toothpicks">
+    <link rel="stylesheet" href="entries.css">
+  </head>
+
+<script>
+let repository = "repos/sdslayer100/rsewiki"
+let targetFile = "section01/040.html"
+fetch(`https://api.github.com/${repository}/commits?path=${targetFile}`) // fetch this URL
+.then(x => x.json()) // convert to JSON
+.then(commits => { // "commits" is a list of all the commits + details
+    let mostRecentCommit = commits[0] // get the first commit in the list
+    let commitDate = mostRecentCommit.commit.author.date // get the date (inside commit.author.date) 
+    let dateObj = new Date(commitDate) // convert to a JS date which can be styled in any way you want
+
+    // dateObj has a bunch of functions for styling however you want
+    // full list - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#instance_methods
+    console.log("Raw Date: " + dateObj)
+    console.log("Long Date: " + dateObj.toDateString())
+    console.log("Short Date: " + dateObj.toLocaleDateString('en-US'))
+    console.log("Unix Timestamp: " + dateObj.getTime())
+	var options = { year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: false };
+	options.timeZone = 'PST';
+	options.timeZoneName = 'short';
+	document.getElementById("demo").innerHTML = dateObj.toLocaleString("en-US", options);
+})
+</script>
+    <h1>RSE-006</h1>
+    <h2>Devastating Toothpicks</h2>
+	<div>DANGER LEVEL: 3</div>
+	<div>CLEARANCE LEVEL: 4</div>
+	<br>
+	<div style="font-size:18px;"><a href="./005.html">[← RSE-005]</a> <a href="./random.html">[RANDOM]</a> <a href="./007.html">[RSE-007→]</a></div>
+    <hr>
+    </hr>
+
+
+    <p>
+      <table>
+        <tr>
+          <th><img src="walltooth.png" style="width:380px;height:auto;"/></th>
+        </tr>
+        <tr>
+          <th>A section of wall shortly after interacting with RSE-006</th>
+        </tr>
+      </table>
+    </p>
+    <h3>DESCRIPTION</h3>
+	
+    <p>RSE-006 refers to the collection of sixteen innate birch wood toothpicks, classified RSE-006-1 through RSE-006-16. Each instance of RSE-006 is in remarkable condition despite frequent testing, where intense force is applied into the RSE-006 specimen.
+	<br>
+	<br>
+	<p>RSE-006 instances have the anomalous ability to completely eradicate most forms of inorganic matter depending on the force applied between RSE-006 and the object the specimen is in contact with. Observations have shown that RSE-006 is capable of fully destroying five-meter thick concrete walls with enough applied force, and further testing may be required to understand RSE-006's full extent.
+
+
+</p>
+    <hr>
+    </hr>
+    <h3>CONTAINMENT PROCEDURES</h3>
+	
+	<p>RSE-006 is contained within a reinforced steel toothpick holder within its own containment chamber in Location 01. RSE-006 is to be removed from containment, counted, and carefully observed for five minutes by a Level 4 Clearance researcher biweekly.</p>
+    <hr>
+    </hr>
+    <h3>EXPERIMENT LOG 006-1</h3>
+	<div>Date: Monday, November 23, 1992 [2:35PM]</div><br>
+	<div>Observer(s): Dr. Mason</div><br>
+	<div>Subject(s): RSE-006-8, Brick</div><br>
+	<div>Test Subject(s): Dr. Josh</div><br>
+	<div style="font-family:Helvetica, sans-serif;
+	font-variant:small-caps;font-size: 20px;">
+Prompt: RSE-006-8 is held one meter above a standard brick and released<br>
+Result: Contact force of ~8.5N, cracks along the brick</div>
+
+<hr></hr>
+ <h3>EXPERIMENT LOG 006-8</h3>
+	<div>Date: Saturday, December 28, 2019 [6:30PM]</div><br>
+	<div>Observer(s): Dr. Sinclair, Dr. Wood, Dr. Grayson</div><br>
+	<div>Subject(s): RSE-006-13, RSE-041</div><br>
+	<div>Test Subject(s): Dr. Josh</div><br>
+	<div style="font-family:Helvetica, sans-serif;
+	font-variant:small-caps;font-size: 20px;">
+Prompt: RSE-006-13 is loaded into a custom built chamber similar to a gun and fired at a distance of 10 meters<br>
+Result: No damage to RSE-041, instead RSE-006-13 rebounds and collapses onto the floor causing slight cracks to appear</div>
+	
+	
+	<hr></hr><br>
+	<div><a href="./section01.html">[BACK]</a> <a href="../index.html">[HOME]</a></div><br>
+	<footer>Written by Lix
+		<br><span style="color:#ffffff;font-family:Times New Roman;font-variant:none;">Date acquired: 11/22/1992</span>
+		<br><span style="color:#ffffff;font-family:Times New Roman;font-variant:none;">Last updated: </span>
+	<span id='demo' style="color:#ffffff;font-family:Times New Roman;font-variant:none;"></footer>
+	
+  </body>
+
+</html>
