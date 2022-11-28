@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>RSE Wiki</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="RSE-043: The Riddle Master">
+    <link rel="stylesheet" href="entries.css">
+  </head>
+
+<script>
+let repository = "repos/sdslayer100/rsewiki"
+let targetFile = "section01/043.html"
+fetch(`https://api.github.com/${repository}/commits?path=${targetFile}`) // fetch this URL
+.then(x => x.json()) // convert to JSON
+.then(commits => { // "commits" is a list of all the commits + details
+    let mostRecentCommit = commits[0] // get the first commit in the list
+    let commitDate = mostRecentCommit.commit.author.date // get the date (inside commit.author.date) 
+    let dateObj = new Date(commitDate) // convert to a JS date which can be styled in any way you want
+
+    // dateObj has a bunch of functions for styling however you want
+    // full list - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#instance_methods
+    console.log("Raw Date: " + dateObj)
+    console.log("Long Date: " + dateObj.toDateString())
+    console.log("Short Date: " + dateObj.toLocaleDateString('en-US'))
+    console.log("Unix Timestamp: " + dateObj.getTime())
+	var options = { year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: false };
+	options.timeZone = 'PST';
+	options.timeZoneName = 'short';
+	document.getElementById("demo").innerHTML = dateObj.toLocaleString("en-US", options);
+})
+</script>
+
+    <h1>RSE-043</h1>
+    <h2>The Riddle Master</h2>
+    <div>DANGER LEVEL: 4</div>
+    <div>CLEARANCE LEVEL: 4</div>
+	<br>
+	<div style="font-size:18px;"><a href="./051.html">[←RSE-042]</a> <a href="./random.html">[RANDOM]</a> <a href="./044.html">[RSE-044→]</a></div>
+    <hr>
+    </hr>
+    <h3>DESCRIPTION</h3>
+
+
+    <p>RSE-043 is a humanoid being of slim stature, standing at 10 feet 4 inches tall, weighing about 170 pounds. RSE-043 always stands in a hunched position, making it practically about 8 feet tall. It always wears shredded gray clothes, a monocle, a top hat, and always has a cigar in his mouth. RSE-043 has shown to be invincible to all attempted methods of termination, such as firearms, bombs, and burning.
+	<br>
+	<br>
+	RSE-043 is conversational to those around it, however it will always at one point ask its conversation partner a riddle. If they do not answer the riddle, RSE-043 will become enraged and start attacking the subject with immense force and power, despite appearing remarkably weak, until they are dead, usually from blunt force trauma or internal bleeding. These riddles vary in difficulty, some being irrationally easy to some being impossible altogether.
+	<br>
+	<br>
+	If the subject attempts to answer the riddle but gives an incorrect response, RSE-043 will begin sinisterly laughing and muttering ‘wrong.’ After about 20 seconds of this behavior, it will begin running directly towards the subject, breaking down any walls in its path and navigating around any obstructions to reach its target before snapping their neck.
+	<br>
+	<br>
+	If the subject answers the riddle correctly, RSE-043 will appear sad and will reward the subject with a random item it pulls out from inside itself. These prizes have no correlation to each other or the riddle that was asked. Some items handed out by RSE-043 consist of the following: three marbles, a twenty pound dumbbell, an entire small dog, two quarters, and a molding slice of bread.
+	</p>
+
+    <hr>
+    </hr>
+    <h3>CONTAINMENT PROCEDURES</h3>
+
+    <p style="text-align:center;">RSE-043 is kept in a padded containment cell in Location 04 that has one observation window made out of one-way glass so RSE-043 can not locate any subject outside of its room and attempt to initiate a conversation.</p>
+
+    <hr>
+    </hr>
+    <h3>EXPERIMENT LOG 043-1</h3>
+    <div>Date: Tuesday, August 23, 2005 [7:00PM]</div><br>
+    <div>Observer(s): Dr. Bustavo</div><br>
+    <div>Subject: RSE-043</div><br>
+    <div>Test Subjects: TS619</div><br>
+    <div style="font-family:Helvetica, sans-serif;
+	font-variant:small-caps;font-size: 20px;">
+      <b>*TS619 is instructed to enter the containment cell holding RSE-043*<br>
+*TS619 complies, albeit reluctantly after viewing RSE-043*<br>
+*After stepping inside, the airlock door to the cell shuts*<br></b>
+<br>
+RSE-043: Finally, a visitor! I’ve been so antsy with no one to talk to.<br>
+TS619: Yeah. Cool, dude.<br>
+RSE-043: You seem like my kind of guy. Very laid back, but responsible. Very dismissive, but compassionate.<br>
+TS619: You talk like you browse Reddit on the daily. Can we hurry this up, please?<br>
+<br>
+<b>*TS619 is instructed to continue conversation with RSE-043*<br></b>
+<br>
+RSE-043: Oh, they’ll let you go alright. Only if you can answer this one question.<br>
+TS619: Sure. Let’s hear it.<br>
+RSE-043: I have no legs, but I must walk. I have no mouth, but I must talk. What am I?<br>
+TS619: I don’t know. Crippled?<br>
+<br>
+<b>*RSE-043 begins to laugh maniacally*<br></b>
+<br>
+RSE-043: Wrong! Wrong! Wrong!<br>
+TS619: Jesus. Can you shut the fuck up already?<br>
+<br>
+<b>*After approximately 18 seconds of repeated behavior by RSE-043, he begins to charge at TS619*<br>
+*RSE-043 beats TS619 violently until the subject’s face caves in and all that remains is a bloodied corpse*</b></div>
+
+      <div>
+
+
+        <hr>
+        </hr><br>
+        <div><a href="./section01.html">[BACK]</a> <a href="../index.html">[HOME]</a></div><br>
+        <footer>Written by sd, revised by Lix
+		<br><span style="color:#ffffff;font-family:Times New Roman;font-variant:none;">Date acquired: 08/22/2005 </span>
+		<br><span style="color:#ffffff;font-family:Times New Roman;font-variant:none;">Last updated: </span>
+	<span id='demo' style="color:#ffffff;font-family:Times New Roman;font-variant:none;">
+		</footer>
+
+  </body>
+
+</html>
