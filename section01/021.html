@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>RSE Wiki</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="RSE-021: Bottles">
+    <link rel="stylesheet" href="entries.css">
+  </head>
+
+<script>
+let repository = "repos/sdslayer100/rsewiki"
+let targetFile = "section01/021.html"
+fetch(`https://api.github.com/${repository}/commits?path=${targetFile}`) // fetch this URL
+.then(x => x.json()) // convert to JSON
+.then(commits => { // "commits" is a list of all the commits + details
+    let mostRecentCommit = commits[0] // get the first commit in the list
+    let commitDate = mostRecentCommit.commit.author.date // get the date (inside commit.author.date) 
+    let dateObj = new Date(commitDate) // convert to a JS date which can be styled in any way you want
+
+    // dateObj has a bunch of functions for styling however you want
+    // full list - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#instance_methods
+    console.log("Raw Date: " + dateObj)
+    console.log("Long Date: " + dateObj.toDateString())
+    console.log("Short Date: " + dateObj.toLocaleDateString('en-US'))
+    console.log("Unix Timestamp: " + dateObj.getTime())
+	var options = { year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: false };
+	options.timeZone = 'PST';
+	options.timeZoneName = 'short';
+	document.getElementById("demo").innerHTML = dateObj.toLocaleString("en-US", options);
+})
+</script>
+    <h1>RSE-021</h1>
+    <h2>Bottles</h2>
+	<div>DANGER LEVEL: 2</div>
+	<div>CLEARANCE LEVEL: 3</div>
+	<br>
+	<div style="font-size:18px;"><a href="./020.html">[← RSE-020]</a> <a href="./random.html">[RANDOM]</a> <a href="./022.html">[RSE-022→]</a></div>
+    <hr>
+    </hr>
+
+
+    <p>
+      <table>
+        <tr>
+          <th><img src="021.webp" style="width:380px;height:auto;"/></th>
+        </tr>
+        <tr>
+          <th>RSE-021 after being cleansed</th>
+        </tr>
+      </table>
+    </p>
+    <h3>DESCRIPTION</h3>
+	
+    <p>RSE-021 refers to a collection of five mint condition reusable glass swing-top bottles with a door on their sides, labeled RSE-021-1 through RSE-021-5. Despite having an obvious stopper at the opening of each bottle, RSE-021 is opened similar to that of a medicine bottle, requiring the user to push both ends of the lid in and rotating. RSE-021 instances are able to hold up to one liter of any liquid.
+<br>
+<br>
+RSE-021 has the unique ability to convert any liquid to its base ingredients once poured inside and sealed. This process is unable to be witnessed, as the glass of the bottles fog up and become visually unclear until finished. No amount of liquid is left behind. Once completed, the door located on the sides of the RSE-021 instances will open allowing the raw ingredients to be removed.
+
+</p>
+    <hr>
+    </hr>
+    <h3>CONTAINMENT PROCEDURES</h3>
+	
+	<p>RSE-021 is held within a padded wooden crate located in the Anomalous Objects Hall of Location 04. The bottles are to be thoroughly cleansed and disinfected after each testing session.</p>
+    <hr>
+    </hr>
+    <h3>EXPERIMENT LOG 021-1</h3>
+	<div>Date: Saturday, April 13, 2002 [12:15PM]</div><br>
+	<div>Observer(s): Dr. Mason</div><br>
+	<div>Subject: RSE-021-1</div><br>
+	<div style="font-family:Helvetica, sans-serif;
+	font-variant:small-caps;font-size: 20px;">
+
+Prompt: Prompt: A container of homemade grape juice is poured through a funnel into RSE-021-1<br>
+Result: Seven Concord grapes, sugar, trace amounts of citric acid</div>
+<hr></hr>
+    <h3>EXPERIMENT LOG 021-2</h3>
+	<div>Date: Sunday, April 14, 2002 [12:15PM]</div><br>
+	<div>Observer(s): Dr. Sink</div><br>
+	<div>Subject: RSE-021-4</div><br>
+	<div style="font-family:Helvetica, sans-serif;
+	font-variant:small-caps;font-size: 20px;">
+Prompt: A can of Coca Cola is poured through a funnel into RSE-021-4<br>
+Result: Sugar, caffeine, unidentified brown powder believed to be artificial coloring</div>
+
+<hr></hr>
+    <h3>EXPERIMENT LOG 021-3</h3>
+	<div>Date: Saturday, April 20, 2002 [12:15PM]</div><br>
+	<div>Observer(s): Dr. Wood</div><br>
+	<div>Subject: RSE-021-2</div><br>
+	<div style="font-family:Helvetica, sans-serif;
+	font-variant:small-caps;font-size: 20px;">
+Prompt: A pitcher of water is poured into RSE-021-2 until full<br>
+Result: Nothing visually, surrounding air is observed to have slightly more hydrogen and oxygen</div>
+
+	
+	
+	<hr></hr><br>
+	<div><a href="./section01.html">[BACK]</a> <a href="../index.html">[HOME]</a></div><br>
+	<footer>Written by Lix
+		<br><span style="color:#ffffff;font-family:Times New Roman;font-variant:none;">Date acquired: 4/12/2002</span>
+		<br><span style="color:#ffffff;font-family:Times New Roman;font-variant:none;">Last updated: </span>
+	<span id='demo' style="color:#ffffff;font-family:Times New Roman;font-variant:none;"></footer>
+	
+  </body>
+
+</html>
