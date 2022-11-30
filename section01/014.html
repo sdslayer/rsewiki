@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>RSE Wiki</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="RSE-014: Oops">
+    <link rel="stylesheet" href="entries.css">
+  </head>
+
+<script>
+let repository = "repos/sdslayer100/rsewiki"
+let targetFile = "section01/014.html"
+fetch(`https://api.github.com/${repository}/commits?path=${targetFile}`) // fetch this URL
+.then(x => x.json()) // convert to JSON
+.then(commits => { // "commits" is a list of all the commits + details
+    let mostRecentCommit = commits[0] // get the first commit in the list
+    let commitDate = mostRecentCommit.commit.author.date // get the date (inside commit.author.date) 
+    let dateObj = new Date(commitDate) // convert to a JS date which can be styled in any way you want
+
+    // dateObj has a bunch of functions for styling however you want
+    // full list - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#instance_methods
+    console.log("Raw Date: " + dateObj)
+    console.log("Long Date: " + dateObj.toDateString())
+    console.log("Short Date: " + dateObj.toLocaleDateString('en-US'))
+    console.log("Unix Timestamp: " + dateObj.getTime())
+	var options = { year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: false };
+	options.timeZone = 'PST';
+	options.timeZoneName = 'short';
+	document.getElementById("demo").innerHTML = dateObj.toLocaleString("en-US", options);
+})
+</script>
+    <h1>RSE-014</h1>
+    <h2>Oops</h2>
+	<div>DANGER LEVEL: 2</div>
+	<div>CLEARANCE LEVEL: 4</div>
+	<br>
+	<div style="font-size:18px;"><a href="./013.html">[← RSE-013]</a> <a href="./random.html">[RANDOM]</a> <a href="./015.html">[RSE-015→]</a></div>
+    <hr>
+    </hr>
+
+
+    
+    <h3>DESCRIPTION</h3>
+	
+    <p> RSE-014 refers to an anomalous occurrence in various RSE locations. RSE-014 does not bear a physical form. RSE-014 occurs very infrequently, and no patterns have been recognized besides being reported slightly more frequent during the last three months of the year.
+<br>
+<br>
+RSE-014 will grant any wish at seemingly inappropriate times, even if not regarded to RSE-014 directly. The upper limit of what a subject may wish for is unknown, but wishes that are considered absurd by most are very rarely granted.
+<br>
+<br>
+RSE-014 was theorized after multiple occurrences, but ultimately discovered on July 2, 2021 after the young child of Dr. Gasca wished he ‘wasn’t alive.’ Two days later, Gasca suffered a heart attack in the middle of bonding with his child at the on-site playground. The only evidence of this event occurring is this summary.
+
+</p>
+    <hr>
+    </hr>
+    <h3>CONTAINMENT PROCEDURES</h3>
+	
+	<p style="text-align:center;">Due to the nature of RSE-014, it is not able to be contained. However, any RSE personnel under the clearance level of 4 are not to be informed of its existence. In the case of an RSE-014 event occurring, which would imply its existence to unknowing personnel, the minds of those witnessing the event are to have any information regarding it wiped.
+</p>
+
+	
+	
+	<hr></hr><br>
+	<div><a href="./section01.html">[BACK]</a> <a href="../index.html">[HOME]</a></div><br>
+	<footer>Written by Lix
+		<br><span style="color:#ffffff;font-family:Times New Roman;font-variant:none;">Date acquired: 7/11/2021</span>
+		<br><span style="color:#ffffff;font-family:Times New Roman;font-variant:none;">Last updated: </span>
+	<span id='demo' style="color:#ffffff;font-family:Times New Roman;font-variant:none;"></footer>
+	
+  </body>
+
+</html>
