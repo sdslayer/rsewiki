@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>RSE Wiki</title>
+	<link rel="icon" href="../favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="og:title" content="RSE Wiki">
+    <meta name="og:description" content="RSE-051: Hour Twenty-Five">
+    <meta name="og:image" content="https://rsewiki.netlify.app/section01/media/007tot.png">
+    <link rel="stylesheet" href="entries.css">
+  </head>
+
+<script>
+let repository = "repos/sdslayer100/rsewiki"
+let targetFile = "section01/051.html"
+fetch(`https://api.github.com/${repository}/commits?path=${targetFile}`) // fetch this URL
+.then(x => x.json()) // convert to JSON
+.then(commits => { // "commits" is a list of all the commits + details
+    let mostRecentCommit = commits[0] // get the first commit in the list
+    let commitDate = mostRecentCommit.commit.author.date // get the date (inside commit.author.date) 
+    let dateObj = new Date(commitDate) // convert to a JS date which can be styled in any way you want
+
+    // dateObj has a bunch of functions for styling however you want
+    // full list - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#instance_methods
+    console.log("Raw Date: " + dateObj)
+    console.log("Long Date: " + dateObj.toDateString())
+    console.log("Short Date: " + dateObj.toLocaleDateString('en-US'))
+    console.log("Unix Timestamp: " + dateObj.getTime())
+	var options = { year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: false };
+	options.timeZone = 'PST';
+	options.timeZoneName = 'short';
+	document.getElementById("demo").innerHTML = dateObj.toLocaleString("en-US", options);
+})
+</script>
+    <h1>RSE-051</h1>
+    <h2>Hour Twenty-Five</h2>
+	<div>DANGER LEVEL: 4</div>
+	<div>CLEARANCE LEVEL: 3</div>
+	<br>
+	<div style="font-size:18px;"><a href="./050.html">[← RSE-050]</a> <a href="./random.html">[RANDOM]</a> <a href="./052.html">[RSE-052→]</a></div>
+    <hr>
+    </hr>
+
+
+
+    <h3>DESCRIPTION</h3>
+	
+    <p> RSE-051 is a grandfather clock speculated to be manufactured sometime in the 1950s. It measures about 6 feet, 6 inches tall. The trait that makes RSE-051 notable from every other grandfather clock is the face. RSE-051’s clock face is formatted differently from any other standard clock of the same style, resembling something similar to 24-hour time format instead of a typical 12-hour one with one difference. It resembles what is typical of a 24 hour clock face, however it also includes a ‘25’ in the space where the ‘12’ would be on a regular clock, pushing the ‘24’ down to around the 11:45 position.
+<br>
+<br>
+Most of the time RSE-051 functions regularly and keeps in check with real-time, having the hour hand skip the 25th hour on its own. RSE-051 chimes as expected of a regular grandfather clock, on every hour corresponding to the number of hours that have passed since the previous midnight. However, at times, which are still being examined to attempt to find a correlation, RSE-051 will indeed strike the 25th hour. The specific dates this happens on seem to be mostly random but appear to happen within a week of a US-observed holiday, sometimes being on the holiday itself.
+<br>
+<br>
+When RSE-051 strikes the 25th hour, it will chime the expected 25 times, and upon completing the last chime, the face will emit a strong red glow, illuminating the entirety of the room it is kept in. It emits this glow for 10 seconds, and during this time will exterminate any organisms within the room by means of immense radiation burning.
+After this process is over, the glow fades, and RSE-051 re-syncs with real-time.
+<br>
+<br>
+It is possible to predict whether or not the 25th chime will occur on any given day based on its’ chimes throughout the day. Normally, RSE-051 chimes every hour. However, on days where a 25th chime occurs, RSE-051 only chimes every 5th hour, beginning at hour 24 of the previous day. This pattern occurs until the chime. (12am, 5am, 10am, 3pm, 8pm, 1am [hour 25])
+<br>
+<br>
+During the chime event, RSE-051 only exterminates what it can reach within an enclosure. If there are any gaps to the outside, an event will not occur even if it strikes the 25th hour. In relation to this, if a gap is opened in an enclosure containing RSE-051 while an event is occurring, the event will abruptly stop and it will immediately re-sync with real-time.
+<br>
+<br>
+No one who has been subjected to an RSE-051 chime event has survived. Attempts to record the events up close result in immense damage to the internal components of the hardware involved. This problem is mitigated slightly with a live stream, although very few moments of the events actually manage to make it off the camera onto the host computer where the stream data is being sent.
+
+
+
+
+
+</p>
+    <hr>
+    </hr>
+    <h3>CONTAINMENT PROCEDURES</h3>
+	
+	<p>RSE-051 is kept in an airtight room in Location 03 with an interior and exterior door leading to the chamber. It is fitted with a large plexiglass window on one side for the purpose of researchers in the area being able to tell if an event is occurring.</p>
+	<hr>
+    </hr>
+    <h3>EXPERIMENT LOG 051-A</h3>
+	<div>Date: Thursday, June 23, 2022 [12:59:48 AM]</div><br>
+	<div>Observer(s): Dr. Josh</div><br>
+	<div>Subject(s): RSE-051, </div><br>
+		<div>Test Subject(s): TS1170, TS592 </div><br>
+	<div style="font-family:Helvetica, sans-serif;
+	font-variant:small-caps;font-size: 20px;">
+*Dr. Josh speaks directly into a microphone*<br><br>
+Dr. Josh: Experiment Log, RSE-051-A, today is June 23, 2022, four days after the observance of Father’s Day.<br><br>
+*Dr. Josh speaks over a PA system into the room containing RSE-051 and TS1170*<br><br>
+Dr. Josh: Alright 1170, an event is expected to occur in the next 10 seconds.<br><br>
+TS1170: What does that imply?<br><br>
+Dr. Josh: That’s not important, just stare at the clock’s face and describe what you see.<br><br>
+TS1170: Okay, well, it’s about to hit 25…<br><br>
+*RSE-051’s hand strikes 25 and begins chiming*<br><br>
+TS1170: Wow that’s loud.<br><br>
+Dr. Josh: Can you do me a favor and count the chimes out loud?<br><br>
+TS1170: Ok this is third… fourth… fifth…<br><br>
+*TS1170 continues counting*<br><br>
+TS1170: …twenty-second… twenty-third… twenty-fourth… twenty-fi—WOAH the clock just started glowing super bright red.<br><br>
+Dr. Josh: Do you feel anything strange?<br><br>
+TS1170: Uh… no? I feel pretty nor—AA—<br><br>
+*TS1170 falls over and becomes unresponsive*<br><br>
+Dr. Josh: 1170? Are you alright?<br><br>
+*The red glow emitting from RSE-051 fades away, the clock is observed re-syncing with real-time.*<br>
+*Dr. Josh speaks into a phone*<br><br>
+Dr. Josh: Hey, yeah it’s Josh. Can you send another Test Subject down the hall to 051’s chamber? Thanks.<br><br>
+*TS592 arrives at RSE-051’s containment chamber*<br><br>
+Dr. Josh: Hey, yeah can you go in that room and tell me what you observe looking at that guy in there?<br><br>
+TS592: Sure.<br><br>
+*TS592 enters RSE-051’s chamber and looks at TS1170*<br><br>
+TS592: Well uh, I think he’s dead.<br><br>
+Dr. Josh: Is the manner of death apparent?<br><br>
+TS592: His body is smoking, and his entire front half is charred to all hell.<br><br>
+Dr. Josh: So you think he burned to death?<br><br>
+TS592: That’d be my guess atleast but determining that kinda sounds like your job.<br><br>
+Dr. Josh: Alright alright back to your cell.<br>
+</div>
+	<hr>
+    </hr>
+    <h3>EXPERIMENT LOG 051-B</h3>
+	<div>Date: Sunday, April 9, 2023 [12:59:50 AM]</div><br>
+	<div>Observer(s): Dr. Wood</div><br>
+	<div>Subject(s): RSE-051</div><br>
+	<div>Test Subject(s): TS401, TS49</div><br>
+	<div style="font-family:Helvetica, sans-serif;
+	font-variant:small-caps;font-size: 20px;">
+*Dr. Wood speaks over a PA system into the room containing RSE-051 and TS401*<br><br>
+Dr. Wood: Alright TS401, an event should begin in the next 10ish seconds.<br><br>
+TS401: A what?<br><br>
+Dr. Wood: Yeah.<br><br>
+*RSE-051’s hand strikes 25 and begins chiming*<br><br>
+Dr. Wood: Alright, 49 when I tell you, you open the door as fast as possible.<br><br>
+TS49: Okay.<br><br>
+*RSE-051 chimes completes it’s twenty-fifth chime and begins to glow red*<br><br>
+TS401: WHA—<br><br>
+Dr. Wood: 49, NOW!<br><br>
+*TS49 flings open the door to RSE-051’s containment chamber*<br>
+*The glow coming from RSE-051 immediately stops*<br><br>
+Dr. Wood: 401, are you alright?<br><br>
+*TS401 moans*<br>
+*Subject had second-degree burns on all exposed skin directly facing RSE-051, but did survive after being hospitalized*<br>
+</div>
+
+
+	
+	
+	<hr></hr><br>
+	<div><a href="./section01.html">[BACK]</a> <a href="../index.html">[HOME]</a></div><br>
+	<footer>Written by sd
+		<br><span style="color:#ffffff;font-family:Times New Roman;font-variant:none;">Date acquired: 8/??/1998</span>
+		<br><span style="color:#ffffff;font-family:Times New Roman;font-variant:none;">Last updated: </span>
+	<span id='demo' style="color:#ffffff;font-family:Times New Roman;font-variant:none;"></footer>
+	
+  </body>
+
+</html>

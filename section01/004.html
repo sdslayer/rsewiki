@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>RSE Wiki</title>
+	<link rel="icon" href="../favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="og:title" content="RSE Wiki">
+    <meta name="og:description" content="RSE-004: Mitter Torcheesey">
+    <meta name="og:image" content="https://rsewiki.netlify.app/section01/media/004.webp">
+    <link rel="stylesheet" href="entries.css">
+  </head>
+
+<script>
+let repository = "repos/sdslayer100/rsewiki"
+let targetFile = "section01/004.html"
+fetch(`https://api.github.com/${repository}/commits?path=${targetFile}`) // fetch this URL
+.then(x => x.json()) // convert to JSON
+.then(commits => { // "commits" is a list of all the commits + details
+    let mostRecentCommit = commits[0] // get the first commit in the list
+    let commitDate = mostRecentCommit.commit.author.date // get the date (inside commit.author.date) 
+    let dateObj = new Date(commitDate) // convert to a JS date which can be styled in any way you want
+
+    // dateObj has a bunch of functions for styling however you want
+    // full list - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#instance_methods
+    console.log("Raw Date: " + dateObj)
+    console.log("Long Date: " + dateObj.toDateString())
+    console.log("Short Date: " + dateObj.toLocaleDateString('en-US'))
+    console.log("Unix Timestamp: " + dateObj.getTime())
+	var options = { year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: false };
+	options.timeZone = 'PST';
+	options.timeZoneName = 'short';
+	document.getElementById("demo").innerHTML = dateObj.toLocaleString("en-US", options);
+})
+</script>
+    <h1>RSE-004</h1>
+    <h2>Mitter Torcheesey</h2>
+	<div>DANGER LEVEL: 5</div>
+	<div>CLEARANCE LEVEL: 4</div>
+	<br>
+	<div style="font-size:18px;"><a href="./003.html">[← RSE-003]</a> <a href="./random.html">[RANDOM]</a> <a href="./005.html">[RSE-005→]</a></div>
+    <hr>
+    </hr>
+
+
+    <p>
+      <table>
+        <tr>
+          <th><img src="media/004.webp" style="width:380px;height:auto;"/></th>
+        </tr>
+        <tr>
+          <th>A plush with RSE-004 barely<br>visible at the top.</th>
+        </tr>
+      </table>
+    </p>
+    <h3>DESCRIPTION</h3>
+	
+    <p>RSE-004 is best described as a blue colored hexapod with a large ovoid for a head. It has the ability to phase through any walls thinner than 3 feet of solid material. This had led to many incidents of homicide caused by RSE-004, as it has recorded history of kidnapping people, taking them as hostages for anywhere between 3 days and 2 months, before ultimately killing them.
+<br>
+<br>
+RSE-004 was captured on July 22nd, ███ after a 15-hour long chase in Colorado through combined cooperation of the RSE Foundation as well as numerous Colorado city and county police personnel. It was apprehended about 5 miles from the county center of Arapahoe County, Colorado.<br><br>
+
+RSE-004, as stated before, can phase through thin walls. However, it can not phase through people or any other living organisms. RSE-004 also, while not having any visible mouth, is able to emit human-like speech, although it appears to only know how to speak Italian. Attempts at using internet translation services are unsuccessful on RSE-004.<br>
+
+
+
+</p>
+    <hr>
+    </hr>
+    <h3>CONTAINMENT PROCEDURES</h3>
+	
+	<p style="text-align:center;">RSE-004 is kept in a containment chamber at Location 03 in a cubic room. The walls are 15 feet thick and are solid reinforced iron. There is a motion detecting camera mounted in the corner of the chamber to monitor any attempts at breaching containment.</p>
+    <hr>
+    </hr>
+    <h3>EXPERIMENT LOG 004-1</h3>
+	<div>Date: Wednesday, November 16, 2012 [4:11PM]</div><br>
+	<div>Observer(s): Dr. Josh, Dr. Mason</div><br>
+	<div>Subject: RSE-004</div><br>
+	<div>Test Subject(s): TS909</div><br>
+	<div style="font-family:Helvetica, sans-serif;
+	font-variant:small-caps;font-size: 20px;">
+
+*Both observers are viewing the experiment by controlling the camera in the containment unit*<br>
+*TS909 is lowered through a hole in the ceiling by rope into RSE-004’s containment chamber*<br><br>
+Dr. Mason: Alright, 909, good luck.<br><br>
+TS909: What the fuck is that even supposed to mean? You people are fucking killing us<br>and you know it. Do you feel ANY shame? You are a vile, subhuman--<br><br>
+Dr. Josh: Yeah alright 909, that’s enough please, thank you.<br><br>
+*TS909 hits the ground of the chamber*<br>
+*TS909 screams as RSE-004 immediately lunges across the cell at TS909 and begins bludgeoning him to death*<br>
+</div>
+
+	
+	<hr></hr><br>
+	<div><a href="./section01.html">[BACK]</a> <a href="../index.html">[HOME]</a></div><br>
+	<footer>Written by sd
+		<br><span style="color:#ffffff;font-family:Times New Roman;font-variant:none;">Date acquired: 7/22/20██</span>
+		<br><span style="color:#ffffff;font-family:Times New Roman;font-variant:none;">Last updated: </span>
+	<span id='demo' style="color:#ffffff;font-family:Times New Roman;font-variant:none;"></footer>
+	
+  </body>
+
+</html>

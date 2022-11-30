@@ -7,14 +7,91 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="og:title" content="RSE Wiki">
     <meta name="og:description" content="RSE-047: Welcoming Video">
-    <meta name="og:image" content="https://rsewiki.netlify.app/section01/media/logo.png">
+    <!-- <meta name="og:image" content="https://rsewiki.netlify.app/section01/media/logo.png"> -->
     <link rel="stylesheet" href="entries.css">
   </head>
 
-  <body onload="randomlink();">
-  
-<meta http-equiv="Refresh" content="0; url='https://www.youtube.com/watch?v=GppXlXfwIDw'" />
+<script>
+let repository = "repos/sdslayer100/rsewiki"
+let targetFile = "section01/047.html"
+fetch(`https://api.github.com/${repository}/commits?path=${targetFile}`) // fetch this URL
+.then(x => x.json()) // convert to JSON
+.then(commits => { // "commits" is a list of all the commits + details
+    let mostRecentCommit = commits[0] // get the first commit in the list
+    let commitDate = mostRecentCommit.commit.author.date // get the date (inside commit.author.date) 
+    let dateObj = new Date(commitDate) // convert to a JS date which can be styled in any way you want
 
+    // dateObj has a bunch of functions for styling however you want
+    // full list - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#instance_methods
+    console.log("Raw Date: " + dateObj)
+    console.log("Long Date: " + dateObj.toDateString())
+    console.log("Short Date: " + dateObj.toLocaleDateString('en-US'))
+    console.log("Unix Timestamp: " + dateObj.getTime())
+	var options = { year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: false };
+	options.timeZone = 'PST';
+	options.timeZoneName = 'short';
+	document.getElementById("demo").innerHTML = dateObj.toLocaleString("en-US", options);
+})
+</script>
+    <h1>RSE-047</h1>
+    <h2>Welcoming Video</h2>
+	<div>DANGER LEVEL: 1</div>
+	<div>CLEARANCE LEVEL: 1</div>
+	<br>
+	<div style="font-size:18px;"><a href="./046.html">[← RSE-046]</a> <a href="./random.html">[RANDOM]</a> <a href="./048.html">[RSE-048→]</a></div>
+    <hr>
+    </hr>
+	 <p>
+      <table>
+        <tr>
+          <th>
+		  
+		   <video width="420" height="240" controls>
+  <source src="media/047.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video> 
+		  
+		  </th>
+        </tr>
+        <tr>
+          <th>RSE-047 (Warning: Anomalous properties may be present)</th>
+        </tr>
+      </table>
+    </p>
+    <h3>DESCRIPTION</h3>
+
+
+   
+	
+    <p> RSE-047 is a public YouTube video uploaded to the site on September 22, 2012 by an unknown uploader. The upload is 10 seconds in length and features a pure black screen with the words “WELCOME TO THE CHANNEL!” written in a compressed white Arial font. The original video link has since been lost, however channel Lix’s Archive reuploaded a mirror version on May 19, 2015. The video is known to incite extreme fits of laughter into those who watch it, lengths of which can vary greatly depending on the subject.<br>
+
+</p>
+    <hr>
+    </hr>
+    <h3>CONTAINMENT PROCEDURES</h3>
+	
+	<p>RSE-047 can not physically be contained as it resides on the internet, although this is not an inconvenience to the RSE Foundation nor a threat to society as a whole as the RSE is completely incapable of actually harming anyone directly.</p>
+ 	<hr>
+    </hr>
+    <h3>EXPERIMENT LOG 047-1</h3>
+	<div>Date: Tuesday, January 11, 2022 [2:47AM]</div><br>
+	<div>Observer(s): Dr. Wood</div><br>
+	<div>Subject(s): RSE-047</div><br>
+	<div>Test Subject(s): Dr. Josh</div><br>
+	<div style="font-family:Helvetica, sans-serif;
+	font-variant:small-caps;font-size: 20px;">
+*Dr. Wood exposes Dr. Josh to the mirror video*<br>
+*Dr. Josh proceeds to have a laughing fit lasting until approximately 3:11AM*</div>
+
+	
+	
+	<hr></hr><br>
+	<div><a href="./section01.html">[BACK]</a> <a href="../index.html">[HOME]</a></div><br>
+	<footer>Written by sd
+		<br><span style="color:#ffffff;font-family:Times New Roman;font-variant:none;">Date acquired: 1/11/2022</span>
+		<br><span style="color:#ffffff;font-family:Times New Roman;font-variant:none;">Last updated: </span>
+	<span id='demo' style="color:#ffffff;font-family:Times New Roman;font-variant:none;"></footer>
+	
   </body>
 
 </html>
