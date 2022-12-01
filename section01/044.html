@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>RSE Wiki</title>
+	<link rel="icon" href="../favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="og:title" content="RSE Wiki">
+    <meta name="og:description" content="RSE-044: North Korean Airspace">
+    <meta name="og:image" content="https://rsewiki.netlify.app/section01/media/044.webp">
+    <link rel="stylesheet" href="entries.css">
+  </head>
+
+<script>
+let repository = "repos/sdslayer100/rsewiki"
+let targetFile = "section01/044.html"
+fetch(`https://api.github.com/${repository}/commits?path=${targetFile}`) // fetch this URL
+.then(x => x.json()) // convert to JSON
+.then(commits => { // "commits" is a list of all the commits + details
+    let mostRecentCommit = commits[0] // get the first commit in the list
+    let commitDate = mostRecentCommit.commit.author.date // get the date (inside commit.author.date) 
+    let dateObj = new Date(commitDate) // convert to a JS date which can be styled in any way you want
+
+    // dateObj has a bunch of functions for styling however you want
+    // full list - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#instance_methods
+    console.log("Raw Date: " + dateObj)
+    console.log("Long Date: " + dateObj.toDateString())
+    console.log("Short Date: " + dateObj.toLocaleDateString('en-US'))
+    console.log("Unix Timestamp: " + dateObj.getTime())
+	var options = { year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: false };
+	options.timeZone = 'PST';
+	options.timeZoneName = 'short';
+	document.getElementById("demo").innerHTML = dateObj.toLocaleString("en-US", options);
+})
+</script>
+    <h1>RSE-044</h1>
+    <h2>North Korean Airspace</h2>
+	<div>DANGER LEVEL: 3</div>
+	<div>CLEARANCE LEVEL: 5</div>
+	<br>
+	<div style="font-size:18px;"><a href="./043.html">[← RSE-043]</a> <a href="./random.html">[RANDOM]</a> <a href="./045.html">[RSE-045→]</a></div>
+    <hr>
+    </hr>
+
+
+    <p>
+      <table>
+        <tr>
+          <th><img src="media/044.webp" style="width:240px;height:auto;"/></th>
+        </tr>
+        <tr>
+          <th>RSE-044-1</th>
+        </tr>
+      </table>
+    </p>
+    <h3>DESCRIPTION</h3>
+	
+    <p>RSE-044 is an approximately one square mile region in the Class A airspace area above the Arch of Triumph, classified RSE-044-1, in Pyongyang, North Korea. The exact barriers of RSE-044 are unknown, the one square mile area is only approximated as previously stated. After the discovery of RSE-044, the hours in which visitors are able to observe RSE-044-1 have been shortened tremendously in the case of an unexpected RSE-044 passage. See below for more details.
+	<br>
+	<br>
+	Any aircraft that passes through RSE-044 will suddenly vanish without explanation. This can be observed and is often described as the aircraft passing through an invisible gradient. It is unknown where RSE-044 redirects these flights to, as tracking devices placed on flights are not able to capture their location after passing through RSE-044. Aircrafts that vanish after passing through RSE-044 will reappear at random intervals, in some cases lasting as short as two days and in others as long as ten years. To onboard passengers, RSE-044 is negligible and they are not able to recount vanishing after re-emergence. Everything that passes through RSE-044 will reappear unscathed.
+	<br>
+
+
+</p>
+    <hr>
+    </hr>
+    <h3>CONTAINMENT PROCEDURES</h3>
+	
+	<p>Due to the nature of RSE-044, it cannot be contained. However, RSE personnel are to be stationed in the vicinity of RSE-044-1 and are to monitor surrounding air traffic. All routes passing through the area have been redirected after the discovery of RSE-044. Note that the danger classification of 2 refers to possible psychological damage inflicted on those who witness an aircraft passing through RSE-044.</p>
+    
+
+
+
+	</div>
+	
+	
+	<hr></hr>
+	<div><a href="./section01.html">[BACK]</a> <a href="../index.html">[HOME]</a></div><br>
+	<footer>Written by Lix
+		<br><span style="color:#ffffff;font-family:Times New Roman;font-variant:none;">Date acquired: 2/10/2010</span>
+		<br><span style="color:#ffffff;font-family:Times New Roman;font-variant:none;">Last updated: </span>
+	<span id='demo' style="color:#ffffff;font-family:Times New Roman;font-variant:none;"></footer>
+	
+  </body>
+
+</html>
