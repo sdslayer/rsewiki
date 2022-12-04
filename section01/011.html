@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>RSE Wiki</title>
+	<link rel="icon" href="../favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="og:title" content="RSE Wiki">
+    <meta name="og:description" content="RSE-011: The Amazing Tennis Racket">
+    <meta name="og:image" content="https://rsewiki.netlify.app/section01/media/011.jpg">
+    <link rel="stylesheet" href="entries.css">
+  </head>
+
+<script>
+let repository = "repos/sdslayer100/rsewiki"
+let targetFile = "section01/011.html"
+fetch(`https://api.github.com/${repository}/commits?path=${targetFile}`) // fetch this URL
+.then(x => x.json()) // convert to JSON
+.then(commits => { // "commits" is a list of all the commits + details
+    let mostRecentCommit = commits[0] // get the first commit in the list
+    let commitDate = mostRecentCommit.commit.author.date // get the date (inside commit.author.date) 
+    let dateObj = new Date(commitDate) // convert to a JS date which can be styled in any way you want
+
+    // dateObj has a bunch of functions for styling however you want
+    // full list - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#instance_methods
+    console.log("Raw Date: " + dateObj)
+    console.log("Long Date: " + dateObj.toDateString())
+    console.log("Short Date: " + dateObj.toLocaleDateString('en-US'))
+    console.log("Unix Timestamp: " + dateObj.getTime())
+	var options = { year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: false };
+	options.timeZone = 'PST';
+	options.timeZoneName = 'short';
+	document.getElementById("demo").innerHTML = dateObj.toLocaleString("en-US", options);
+})
+</script>
+    <h1>RSE-011</h1>
+    <h2>The Amazing Tennis Racket</h2>
+	<div>DANGER LEVEL: 1</div>
+	<div>CLEARANCE LEVEL: 3</div>
+	<br>
+	<div style="font-size:18px;"><a href="./010.html">[← RSE-010]</a> <a href="./random.html">[RANDOM]</a> <a href="./012.html">[RSE-012→]</a></div>
+    <hr>
+    </hr>
+
+
+    <p>
+      <table>
+        <tr>
+          <th><img src="media/011.jpg" style="height:300px;width:auto;"/></th>
+        </tr>
+        <tr>
+          <th>RSE-011</th>
+        </tr>
+      </table>
+    </p>
+    <h3>DESCRIPTION</h3>
+	
+    <p> RSE-011 is a standard white and silver Wilson One brand tennis racket. RSE-011 is in good condition, aside from three notable breaks in the netting of the head. RSE-011 was discovered and captured on January 3rd, 2009, after a year-long scandal in which professional player Rafael Nadal had a 150% increase in consistency with his hits and began to win every single match he participated in, including the 2008 Beijing Summer Olympics.<br><br>
+
+RSE-011 grants its holder the ability to never lose a match of tennis, alongside a significant increase in speed and accuracy. Users with no prior tennis playing experience who use RSE-011 in a match against a highly skilled player using a traditional tennis racket will win the match, including an exceptional point ratio against their opponent.
+</p>
+    <hr>
+    </hr>
+    <h3>CONTAINMENT PROCEDURES</h3>
+	
+	<p style="text-align:center;">RSE-011 is held within the Anomalous Objects Hall of Location 03. It is securely locked up to prevent infliction of any further damage. However, RSE-011 is occasionally rented out to trusted personnel for use on the on-site tennis court for experimenting or recreational purposes.</p>
+	
+	
+	<hr></hr><br>
+	<div><a href="./section01.html">[BACK]</a> <a href="../index.html">[HOME]</a></div><br>
+	<footer>Written by Lix
+		<br><span style="color:#ffffff;font-family:Times New Roman;font-variant:none;">Date acquired: 01/03/2009</span>
+		<br><span style="color:#ffffff;font-family:Times New Roman;font-variant:none;">Last updated: </span>
+	<span id='demo' style="color:#ffffff;font-family:Times New Roman;font-variant:none;"></footer>
+	
+  </body>
+
+</html>
