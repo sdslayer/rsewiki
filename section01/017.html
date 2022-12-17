@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>RSE Wiki</title>
+	<link rel="icon" href="../favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="og:title" content="RSE Wiki">
+    <meta name="og:description" content="RSE-017: The School">
+    <meta name="og:image" content="https://rsewiki.netlify.app/section01/media/004.webp">
+    <link rel="stylesheet" href="entries.css">
+  </head>
+
+<script>
+let repository = "repos/sdslayer100/rsewiki"
+let targetFile = "section01/017.html"
+fetch(`https://api.github.com/${repository}/commits?path=${targetFile}`) // fetch this URL
+.then(x => x.json()) // convert to JSON
+.then(commits => { // "commits" is a list of all the commits + details
+    let mostRecentCommit = commits[0] // get the first commit in the list
+    let commitDate = mostRecentCommit.commit.author.date // get the date (inside commit.author.date) 
+    let dateObj = new Date(commitDate) // convert to a JS date which can be styled in any way you want
+
+    // dateObj has a bunch of functions for styling however you want
+    // full list - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#instance_methods
+    console.log("Raw Date: " + dateObj)
+    console.log("Long Date: " + dateObj.toDateString())
+    console.log("Short Date: " + dateObj.toLocaleDateString('en-US'))
+    console.log("Unix Timestamp: " + dateObj.getTime())
+	var options = { year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: false };
+	options.timeZone = 'PST';
+	options.timeZoneName = 'short';
+	document.getElementById("demo").innerHTML = dateObj.toLocaleString("en-US", options);
+})
+</script>
+    <h1>RSE-017</h1>
+    <h2>The School</h2>
+	<div>DANGER LEVEL: 4</div>
+	<div>CLEARANCE LEVEL: 5</div>
+	<br>
+	<div style="font-size:18px;"><a href="./016.html">[← RSE-016]</a> <a href="./random.html">[RANDOM]</a> <a href="./018.html">[RSE-018→]</a></div>
+    <hr>
+    </hr>
+
+
+    <p>
+      <table>
+        <tr>
+          <th><img src="media/017.PNG" style="width:380px;height:auto;"/></th>
+        </tr>
+        <tr>
+          <th>RSE-017 at the time of closure</th>
+        </tr>
+      </table>
+    </p>
+    <h3>DESCRIPTION</h3>
+	
+    <p>RSE-017 is a 11,000 square meter building which was formerly branded and used as the ████████ Middle School, located in ████████, Texas. RSE-017 previously held over 1,500 personnel, including students and staff, before its closure on March 13, 2020, which commenced two months after RSE faculty were notified of anomalous occurrences within RSE-017. This closure was intentionally falsely regarded to the public as being due to low funding and the spread of the COVID-19 pandemic.
+<br>
+<br>
+The theater located within RSE-017, designated RSE-017-A, serves as an invisible ‘anomaly portal,’ manifesting various anomalous items and entities - some of which receiving RSE designation. The spawning of these specimen occurs at 2:37 AM local time every six days, and can summon anywhere from zero to eight specimen. These subjects are unable to exit RSE-017 due to installed high security systems (see containment procedures for more details.)<br><br>
+
+While not being nearly as notable as RSE-017-A, several other anomalies are noted within RSE-017. For example, certain rooms are observable spatial anomalies, such as some being much larger in size rather than their appearance from the outside. Some hallways located within RSE-017 will become non-euclidean at random, impossibly intersecting with other hallways. Exiting these hallways will often return them back to normal.<br><br>
+
+It is unknown how long these anomalies have existed within RSE-017, and reports of anomalous occurrences only have been recognized starting in early 2019. It is important to note that these anomalous occurrences have been noticeably more frequent as each calendar year passes.<br>
+
+
+</p>
+    <hr>
+    </hr>
+    <h3>CONTAINMENT PROCEDURES</h3>
+	
+	<p>Outpost 017-A was constructed close to RSE-017 on a nearby empty lot. Highly advanced security systems are installed within any possible entrance to RSE-017. After its closure, RSE-017 was rebranded to the public as a district building, despite not serving as such. District employees are to be partially informed of the threat that RSE-017 carries, and as a result are to work in a temporary building until a thorough solution can be crafted.<br><br>
+	
+	It is currently unknown if the threat of RSE-017-A can be neutralized. Various safety measures have been installed to both contain specimen appearing from RSE-017-A, alongside various upgrades to the facility, such as the aforementioned high security systems. More notable anomalies appearing from RSE-017-A are to be given RSE designation and transported to an appropriate RSE location.<br></p>
+    <hr>
+    </hr>
+    <h3>EXPERIMENT LOG 017-XX (1)</h3>
+	<div>Date: Sunday, March 14, 2020 [2:37 AM]</div><br>
+	
+	<div style="font-family:Helvetica, sans-serif;
+	font-variant:small-caps;font-size: 20px;">
+		Prompt: A calculator in the theoretical base-11 counting system manifests within RSE-017-A<br><br>
+		Result: Kept in Dr. Romero's office, no RSE designation<br><br></div>
+		    <hr>
+    </hr>
+    <h3>EXPERIMENT LOG 017-XX (2)</h3>
+	<div>Date: Thursday, August 6, 2020 [2:37 AM]</div><br>
+	
+	<div style="font-family:Helvetica, sans-serif;
+	font-variant:small-caps;font-size: 20px;">
+		Prompt: A grandfather clock with a mysterious 25th hour mark capable of eradicating organic matter at seemingly random intervals<br><br>
+		Result: Moved to Location 03, given designation <a href="./051.html">RSE-051</a><br><br></div>
+
+
+	
+	<hr></hr><br>
+	<div><a href="./section01.html">[BACK]</a> <a href="../index.html">[HOME]</a></div><br>
+	<footer>Written by Lix
+		<br><span style="color:#ffffff;font-family:Times New Roman;font-variant:none;">Date acquired: 03/13/2020</span>
+		<br><span style="color:#ffffff;font-family:Times New Roman;font-variant:none;">Last updated: </span>
+	<span id='demo' style="color:#ffffff;font-family:Times New Roman;font-variant:none;"></footer>
+	
+  </body>
+
+</html>
