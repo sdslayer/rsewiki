@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>RSE Wiki</title>
+	<link rel="icon" href="../favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="og:title" content="RSE Wiki">
+    <meta name="og:description" content="RSE-019: As The Lights Go Off">
+    <meta name="og:image" content="https://rsewiki.netlify.app/section01/media/019.webp">
+    <link rel="stylesheet" href="entries.css">
+  </head>
+
+<script>
+let repository = "repos/sdslayer100/rsewiki"
+let targetFile = "section01/019.html"
+fetch(`https://api.github.com/${repository}/commits?path=${targetFile}`) // fetch this URL
+.then(x => x.json()) // convert to JSON
+.then(commits => { // "commits" is a list of all the commits + details
+    let mostRecentCommit = commits[0] // get the first commit in the list
+    let commitDate = mostRecentCommit.commit.author.date // get the date (inside commit.author.date) 
+    let dateObj = new Date(commitDate) // convert to a JS date which can be styled in any way you want
+
+    // dateObj has a bunch of functions for styling however you want
+    // full list - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#instance_methods
+    console.log("Raw Date: " + dateObj)
+    console.log("Long Date: " + dateObj.toDateString())
+    console.log("Short Date: " + dateObj.toLocaleDateString('en-US'))
+    console.log("Unix Timestamp: " + dateObj.getTime())
+	var options = { year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: false };
+	options.timeZone = 'PST';
+	options.timeZoneName = 'short';
+	document.getElementById("demo").innerHTML = dateObj.toLocaleString("en-US", options);
+})
+</script>
+    <h1>RSE-019</h1>
+    <h2>As The Lights Go Off</h2>
+	<div>DANGER LEVEL: 1</div>
+	<div>CLEARANCE LEVEL: 3</div>
+	<br>
+	<div style="font-size:18px;"><a href="./018.html">[← RSE-018]</a> <a href="./random.html">[RANDOM]</a> <a href="./020.html">[RSE-020→]</a></div>
+    <hr>
+    </hr>
+
+
+    <p>
+      <table>
+        <tr>
+          <th><img src="media/019.webp" style="height:300px;width:auto;"/></th>
+        </tr>
+        <tr>
+          <th>RSE-019 in the living room of Dr. ████</th>
+        </tr>
+      </table>
+    </p>
+    <h3>DESCRIPTION</h3>
+	
+    <p> RSE-019 is best described as a sentient shadowy cloud of dark, dense smoke roughly in the shape of a humanoid figure. It is unknown if there is any solid matter under RSE-019, as any attempt to interact with it results in its relocation. RSE-019 measures at approximately 1.78 meters in height and has been unofficially weighed at around 150 grams. Further experimentation may be required to calculate a consistent weight.<br><br>
+	
+	When any form of light is directed at RSE-019, it will almost instantly relocate itself to the closest ill-lighted area. Completely surrounding RSE-019 in light sources from all angles will result in RSE-019 vanishing until an unlit area in the same room becomes available for its relocation. Non-flash photography of RSE-019 is possible, but requires the specimen to be backlit.<br><br>
+
+RSE-019 is not hostile in nature and has had no known attempts of escaping confinement as of January 2023. However, RSE-019 has not been observed responding to human speech. It is unknown if RSE-019 can comprehend language. RSE-019 was discovered pacing around the former home of Dr. ████. No known reports of RSE-019 sightings exist before this account.
+</p>
+    <hr>
+    </hr>
+    <h3>CONTAINMENT PROCEDURES</h3>
+	
+	<p>RSE-019 is held within a 10m x 10m containment cell, equipped with no lighting systems. The observation deck to the cell is to remain dimly lit at all times to avert the possibility of RSE-019 attempting escape. The corridors leading to RSE-019’s cell are to be lit at all times for the same reason.</p>
+	
+	
+	<hr></hr><br>
+	<div><a href="./section01.html">[BACK]</a> <a href="../index.html">[HOME]</a></div><br>
+	<footer>Written by Lix
+		<br><span style="color:#ffffff;font-family:Times New Roman;font-variant:none;">Date acquired: 10/30/2000</span>
+		<br><span style="color:#ffffff;font-family:Times New Roman;font-variant:none;">Last updated: </span>
+	<span id='demo' style="color:#ffffff;font-family:Times New Roman;font-variant:none;"></footer>
+	
+  </body>
+
+</html>
