@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>RSE Wiki</title>
+	<link rel="icon" href="../favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="og:title" content="RSE Wiki">
+    <meta name="og:description" content="RSE-042: Six Flags Over Grushia">
+    <meta name="og:image" content="https://rsewiki.netlify.app/section01/media/042.png">
+    <link rel="stylesheet" href="entries.css">
+  </head>
+
+<script>
+let repository = "repos/sdslayer100/rsewiki"
+let targetFile = "section01/042.html"
+fetch(`https://api.github.com/${repository}/commits?path=${targetFile}`) // fetch this URL
+.then(x => x.json()) // convert to JSON
+.then(commits => { // "commits" is a list of all the commits + details
+    let mostRecentCommit = commits[0] // get the first commit in the list
+    let commitDate = mostRecentCommit.commit.author.date // get the date (inside commit.author.date) 
+    let dateObj = new Date(commitDate) // convert to a JS date which can be styled in any way you want
+
+    // dateObj has a bunch of functions for styling however you want
+    // full list - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#instance_methods
+    console.log("Raw Date: " + dateObj)
+    console.log("Long Date: " + dateObj.toDateString())
+    console.log("Short Date: " + dateObj.toLocaleDateString('en-US'))
+    console.log("Unix Timestamp: " + dateObj.getTime())
+	var options = { year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: false };
+	options.timeZone = 'PST';
+	options.timeZoneName = 'short';
+	document.getElementById("demo").innerHTML = dateObj.toLocaleString("en-US", options);
+})
+</script>
+    <h1>RSE-042</h1>
+    <h2>Six Flags Over Grushia</h2>
+	<div>DANGER LEVEL: 4</div>
+	<div>CLEARANCE LEVEL: 4</div>
+	<br>
+	<div style="font-size:18px;"><a href="./041.html">[← RSE-041]</a> <a href="./random.html">[RANDOM]</a> <a href="./043.html">[RSE-043→]</a></div>
+    <hr>
+    </hr>
+
+
+    <p>
+      <table>
+        <tr>
+          <th><img src="media/042.png" style="height:225px;width:auto;"/></th>
+        </tr>
+        <tr>
+          <th>A coaster located within RSE-042 circa 2018</th>
+        </tr>
+      </table>
+    </p>
+    <h3>DESCRIPTION</h3>
+	
+    <p> RSE-042 is an abandoned 250-acre amusement park located in the western metroplex area of Seed City, Grushia. RSE-042 was previously owned and operated by the Six Flags Entertainment chain from its opening on October 13, 1980 until the chain filed for bankruptcy in late 2008, where the park was sold to the ███████ ████ chain of parks and remained with the company until its closure. With twenty-eight roller coasters to its name, RSE-042 previously held the record for most coasters in one park before its closure on August 30, 2009.<br><br>
+	
+Out of all of the attractions located within RSE-042, sixteen out of the total twenty-eight (labeled RSE-042-1 through RSE-042-16) were constructed after the transfer of ownership in 2008 to the ███████ ████ chain. These attractions feature numerous different methods of executing those who ride them, being abundantly obvious to passengers before they enter the ride. A comprehensive list of all eighteen of these attractions does not currently exist, but a table of the most notable can be found below.<br><br>
+
+<table style="width:100%">
+  <tr>
+    <th>Classification/Name</th>
+    <th>Description</th>
+    <th>Date of Appearance</th>
+  </tr>
+  <tr>
+    <td>RSE-042-4: ‘The Hornet’</td>
+    <td>A red and black replica of the ‘Goliath’ roller coaster located at Six Flags Magic Mountain, concluding with a 70 degree vertical curve which results in the train derailing.</td>
+    <td>04/02/2011</td>
+  </tr>
+  <tr>
+    <td>RSE-042-9: ‘Ouroboros’</td>
+    <td>A 100-ft tall loop coaster which exponentially accelerates, maxing out at around 500 mph and remains at this speed for five minutes straight.</td>
+    <td>10/03/2015</td>
+  </tr>
+   <tr>
+    <td>RSE-042-12: ‘Purgatory’</td>
+    <td>A standard roller coaster which rotates passengers upside down, slows to a stop, and releases the restraints systems resulting in a 200-ft fall before continuing.</td>
+    <td>01/19/2020</td>
+  </tr>
+  <tr>
+    <td>RSE-042-13: ‘Euthanasia’</td>
+    <td> A launch coaster which maxes out at 200 mph and sends the train through twelve loops, inflicting a total of 12 g-forces on the passengers.</td>
+    <td>12/24/2020</td>
+  </tr>
+</table><br>
+<p> <br><br><br><br><br>
+It is believed that the newer rides within RSE-042 were not constructed by the ███████ ████ company, as two new rides have appeared since the park’s closure while not under surveillance. The appearance of newer rides in the park occurs roughly twice a year. It is theorized but not yet proven that RSE-042 may be capable of expanding without any limitations. This idea was conceptualized after the barriers surrounding RSE-042 reshaped on their own to fit the two new additions to the park.
+</p>
+    <hr>
+    </hr>
+    <h3>CONTAINMENT PROCEDURES</h3>
+	
+	<p>Large concrete walls have been constructed along the perimeter of RSE-042 to possibly prevent the expansion of the park, however it is unknown if this is a viable method of containment. RSE faculty were alerted of the anomalous traits located within RSE-042 immediately after RSE-042-1 manifested itself inside of the park on November 16, 2008. The park was acquired by the RSE Association a week after its closure.<br><br>
+	
+	Several outposts have been constructed outside of the entrances into RSE-042 and are to be occupied by guards at all times. Any person who attempts to enter RSE-042 without previous clearance is to be restrained and taken into custody. Any acts of violence against guards are to immediately result in the elimination of the subject in question.</p>
+	
+	
+	<hr></hr><br>
+	<div><a href="./section01.html">[BACK]</a> <a href="../index.html">[HOME]</a></div><br>
+	<footer>Written by Lix
+		<br><span style="color:#ffffff;font-family:Times New Roman;font-variant:none;">Date acquired: 09/06/2009</span>
+		<br><span style="color:#ffffff;font-family:Times New Roman;font-variant:none;">Last updated: </span>
+	<span id='demo' style="color:#ffffff;font-family:Times New Roman;font-variant:none;"></footer>
+	
+  </body>
+
+</html>
