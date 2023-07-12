@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>RSE Wiki</title>
+	<link rel="icon" href="../favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="og:title" content="RSE Wiki">
+    <meta name="og:description" content="RSE-022: Foot the Lamp">
+    <meta name="og:image" content="https://rsewiki.netlify.app/section01/media/lamp.webp">
+    <link rel="stylesheet" href="entries.css">
+  </head>
+
+<script>
+let repository = "repos/sdslayer100/rsewiki"
+let targetFile = "section01/022.html"
+fetch(`https://api.github.com/${repository}/commits?path=${targetFile}`) // fetch this URL
+.then(x => x.json()) // convert to JSON
+.then(commits => { // "commits" is a list of all the commits + details
+    let mostRecentCommit = commits[0] // get the first commit in the list
+    let commitDate = mostRecentCommit.commit.author.date // get the date (inside commit.author.date) 
+    let dateObj = new Date(commitDate) // convert to a JS date which can be styled in any way you want
+
+    // dateObj has a bunch of functions for styling however you want
+    // full list - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#instance_methods
+    console.log("Raw Date: " + dateObj)
+    console.log("Long Date: " + dateObj.toDateString())
+    console.log("Short Date: " + dateObj.toLocaleDateString('en-US'))
+    console.log("Unix Timestamp: " + dateObj.getTime())
+	var options = { year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: false };
+	options.timeZone = 'PST';
+	options.timeZoneName = 'short';
+	document.getElementById("demo").innerHTML = dateObj.toLocaleString("en-US", options);
+})
+</script>
+    <h1>RSE-022</h1>
+    <h2>Foot the Lamp</h2>
+	<div>DANGER LEVEL: 5</div>
+	<div>CLEARANCE LEVEL: 5</div>
+	<br>
+	<div style="font-size:18px;"><a href="./021.html">[← RSE-021]</a> <a href="./random.html">[RANDOM]</a> <a href="./023.html">[RSE-023→]</a></div>
+    <hr>
+    </hr>
+
+
+    <p>
+      <table>
+        <tr>
+          <th><img src="media/lamp.webp" style="width:300px;height:auto;"/></th>
+        </tr>
+        <tr>
+          <th>RSE-022</th>
+        </tr>
+      </table>
+    </p>
+    <h3>DESCRIPTION</h3>
+	
+    <p> RSE-022 is a crystal table lamp bearing a trapezoid-shaped shade over the bulb. RSE-022 is one of the Agents of Chaos created by RSE-010 in the year 13██. RSE-022 exhibits signs of sentience and displays an exceptionally hostile nature. RSE-022 is incapable of being destroyed, and any slight indicators of damage cannot be observed. Efforts to ascertain the composition and properties of RSE-022 have been met with challenges. While conventional observation techniques have been unable to detect any discernible damage or alterations, its resilience implies the presence of unconventional mechanisms.
+<br>
+<br>
+RSE-022 is capable of instantaneously relocating itself horizontally every minute to anywhere it chooses in a 10 meter radius of its starting position. This ability defies the limitations of physical barriers, allowing it to bypass any obstacle or wall instantly.  RSE-022 exhibits the capacity to exploit its teleportation ability as a lethal means, effectively materializing within living organisms to inflict fatal harm, as the subject’s internal organs are displaced to make room for RSE-022.
+
+
+
+</p>
+    <hr>
+    </hr>
+    <h3>CONTAINMENT PROCEDURES</h3>
+	
+	<p>RSE-022 is held within a small room with each surrounding wall being 50 meters thick. A trapdoor is positioned at the top of the chamber, which is intended to exploit RSE-022's known limitations, namely its inability to travel vertically. It is important to acknowledge that the chosen design assumes a static nature of RSE-022, wherein its teleportation ability is limited to horizontal movements within a 10-meter radius. Further research is required to evaluate any potential adaptive behaviors or unanticipated developments that could compromise the effectiveness of the containment chamber.</p>
+	
+	
+	<hr></hr><br>
+	<div><a href="./section01.html">[BACK]</a> <a href="../index.html">[HOME]</a></div><br>
+	<footer>Written by Lix
+		<br><span style="color:#ffffff;font-family:Times New Roman;font-variant:none;">Date acquired: 5/23/1984</span>
+		<br><span style="color:#ffffff;font-family:Times New Roman;font-variant:none;">Last updated: </span>
+	<span id='demo' style="color:#ffffff;font-family:Times New Roman;font-variant:none;"></footer>
+	
+  </body>
+
+</html>
