@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>RSE Wiki</title>
+	<link rel="icon" href="../favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="og:title" content="RSE Wiki">
+    <meta name="og:description" content="RSE-037: The Weather Man">
+    <meta name="og:image" content="https://rsewiki.netlify.app/section01/media/037.png">
+    <link rel="stylesheet" href="entries.css">
+  </head>
+
+<script>
+let repository = "repos/sdslayer100/rsewiki"
+let targetFile = "section01/037.html"
+fetch(`https://api.github.com/${repository}/commits?path=${targetFile}`) // fetch this URL
+.then(x => x.json()) // convert to JSON
+.then(commits => { // "commits" is a list of all the commits + details
+    let mostRecentCommit = commits[0] // get the first commit in the list
+    let commitDate = mostRecentCommit.commit.author.date // get the date (inside commit.author.date) 
+    let dateObj = new Date(commitDate) // convert to a JS date which can be styled in any way you want
+
+    // dateObj has a bunch of functions for styling however you want
+    // full list - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#instance_methods
+    console.log("Raw Date: " + dateObj)
+    console.log("Long Date: " + dateObj.toDateString())
+    console.log("Short Date: " + dateObj.toLocaleDateString('en-US'))
+    console.log("Unix Timestamp: " + dateObj.getTime())
+	var options = { year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: false };
+	options.timeZone = 'PST';
+	options.timeZoneName = 'short';
+	document.getElementById("demo").innerHTML = dateObj.toLocaleString("en-US", options);
+})
+</script>
+    <h1>RSE-037</h1>
+    <h2>The Weather Man</h2>
+	<div>DANGER LEVEL: 4</div>
+	<div>CLEARANCE LEVEL: 2</div>
+	<br>
+	<div style="font-size:18px;"><a href="./036.html">[← RSE-036]</a> <a href="./random.html">[RANDOM]</a> <a href="./038.html">[RSE-038→]</a></div>
+    <hr>
+    </hr>
+
+
+    <p>
+      <table>
+        <tr>
+          <th><img src="media/037.png" style="width:280px;height:auto;"/></th>
+        </tr>
+        <tr>
+          <th>RSE-037 upon escort.</th>
+        </tr>
+      </table>
+    </p>
+    <h3>DESCRIPTION</h3>
+	
+    <p> RSE-037 is a Caucasian male man suspected of being of strict English descent as well as being approximately 70 years of age, although his specific age and origin remain undisclosed. RSE-037 is dressed in a Cold War era business suit as well as bearing a Homburg 1920s era hat on his head. RSE-037 was recovered from the small village of Langthwaite in the United Kingdom - located 67 kilometers southwest of Middlesbrough - where RSE-037 was popular with the locals due to his remarkable ability. See below for more information.
+<br>
+<br>
+RSE-037 possesses a remarkable and seemingly implausible skill to predict the weather with unparalleled precision and remarkable accuracy. RSE-037's predictions have proven to be astoundingly precise, capturing even the most intricate details of upcoming weather phenomena. This includes but is not limited to predicting the exact timing and intensity of rainfall to anticipating temperature fluctuations, wind patterns, and atmospheric pressure variations.
+<br>
+<br>
+Questions regarding the cognitive processes, sensory perception, and potential sources of information or stimuli that inform RSE-037's predictions remain at the forefront of the RSE Association’s current research. However, neuroscientific examinations, including functional magnetic resonance imaging (fMRI) and other imaging techniques, have failed to reveal any distinct neural patterns or structural anomalies that might explain his exceptional predictive skills.
+
+
+
+</p>
+    <hr>
+    </hr>
+    <h3>CONTAINMENT PROCEDURES</h3>
+	
+	<p>RSE-037, due to the uniqueness of his extraordinary weather prediction abilities, is housed within a dedicated containment cell situated in the office sector of Location 03. This specially designed cell provides a secure and controlled environment for RSE-037 while affording him a certain degree of freedom within the designated sector of the facility. RSE-037 is encouraged to engage with the faculty members present within the office sector. This hypothetically encourages a better understanding of the nature of RSE-037.</p>
+	
+	
+	<hr></hr><br>
+	<div><a href="./section01.html">[BACK]</a> <a href="../index.html">[HOME]</a></div><br>
+	<footer>Written by Lix
+		<br><span style="color:#ffffff;font-family:Times New Roman;font-variant:none;">Date acquired: 3/21/1988</span>
+		<br><span style="color:#ffffff;font-family:Times New Roman;font-variant:none;">Last updated: </span>
+	<span id='demo' style="color:#ffffff;font-family:Times New Roman;font-variant:none;"></footer>
+	
+  </body>
+
+</html>
